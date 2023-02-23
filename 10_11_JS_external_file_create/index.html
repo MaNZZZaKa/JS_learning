@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+  <!-- wrapper -->
+  <div class="wrapper"> 
+
+    <!-- main information -->
+    <div class="main-info">
+      <h1>Моя персональна сторінка</h1>
+
+      <img id="myImg" class="img-container" src="./img/My_photo.jpg" alt="Пробачте, ресурс недоступний" />
+
+      <h2>Введіть данні</h2>
+      <input placeholder="Введіть ім.я українською мовою" class="first-name input-container" id="firstName" />
+      <input placeholder="Введіть фамілію" class="last-name input-container" id="lastName" />
+      <input placeholder="Введіть адрессу" class="address input-container" id="address" />
+      
+      <br />
+      <label for="city">Введіть місто де ви проживаєте</label>
+      <select name='city' id="city">
+        <option selected="selected" value="Київ">Київ</option>
+        <option value="Харків">Харків</option>
+        <option value="Миколаїв">Миколаїв</option>
+        <option value="Одесса">Одесса</option>
+      </select>
+    </div>  
+  
+    <!-- Хоббі -->
+    <div class="aboutMe-container" id="hobbies">
+      <input id="onlyJoke" value="я шуткуй" class="address input-container"/>
+      <h2>Коротко про себе:</h2>
+      <br />
+      <textarea id="aboutMe" class="text-container">
+    
+      </textarea>
+    </div>
+  
+
+    <script src="./js/index.js"></script>
+  </div>
+</body>

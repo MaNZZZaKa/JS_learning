@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+  <!-- wrapper -->
+  <div class="wrapper"> 
+
+    <!-- main information -->
+    <div class="main-info">
+      <h1>Моя персональна сторінка</h1>
+
+      <img id="myImg" class="img-container" src="https://a.d-cd.net/XwAAAgJXNOA-960.jpg" alt="Пробачте, ресурс недоступний" />
+
+      <h2>Введіть данні</h2>
+      <input placeholder="Введіть ім.я українською мовою" class="first-name input-container" id="firstName" />
+      <input placeholder="Введіть фамілію" class="last-name input-container" id="lastName" />
+      <input placeholder="Введіть адрессу" class="address input-container" id="address" />
+      
+      <br />
+      <label for="city">Введіть місто де ви проживаєте</label>
+      <select name='city' id="city">
+        <option selected="selected" value="Київ">Київ</option>
+        <option value="Харків">Харків</option>
+        <option value="Миколаїв">Миколаїв</option>
+        <option value="Одесса">Одесса</option>
+      </select>
+    </div>
+
+    <!-- <input value="Введіть ім.я українською мовою" class="first-name" id="first-name" />
+    <input value="Введіть фамілію" class="last-name" id="last-name" />
+    <input value="Введіть адрессу" class="address" id="address" /> -->
+
+  
+  
+    <!-- Хоббі -->
+    <div class="aboutMe-container">
+      <h2>Коротко про себе:</h2>
+      <br />
+      <textarea id="aboutMe" class="text-container">
+    
+      </textarea>
+    </div>
+  
+
+    <script>
+      // var Nameclass = 'first-name';
+      // var firstNameID = 'firstName';
+      // var lastNameID = 'lastName';
+      // var cityID = 'city';
+      // var aboutMeID = 'aboutMe';
+
+      // window.alert('Назва класу: ' + Nameclass);
+
+
+      setInterval(function () {
+        // var firstNameEl = document.getElementById(firstNameID);
+        // var lastNameEl = document.getElementById(lastNameID);
+        // var addressEl = document.getElementById(addressID);
+        // var cityEl = document.getElementById(cityID);
+        // var aboutMeEl = document.getElementById(aboutMeID);
+
+        window.alert(firstName.value);
+        window.alert(lastName.value);
+        window.alert(address.value);
+        window.alert(city.name);
+        window.alert(city.value);
+        window.alert(aboutMe.value);
+
+        
+        window.alert(myImg.className);
+
+      }, 15000);
+
+
+
+
+
+
+    // <ul class="main_list">
+    //     <li>постригтись</li>
+    //     <li>переадітись</li>
+    //     <li>вивчити пару анекдотів</li>
+    //     <li>підійти до дівчини</li>
+    //     <li>сказати привіт</li>
+    //     <li>Розповісти пару анекдотів</li>
+    //     <li>Записати номер телефону</li>
+    //   </ul> 
+    // window.alert('number 2');
+    // window.alert('number 3');
+    // window.alert('number 4');
+    // window.alert('number 5');
+    
+    // window.alert('Введи переклад в поле вводу');
+    // window.alert('Elephant');
+
+
+
+
+
+
+
+    // setInterval(function(){
+    //   var englishWord = document.getElementById('message');
+    //   window.alert(englishWord.value);
+    // }, 6000);
+    
+
+    // window.alert('Введи переклад в поле вводу');
+    // window.alert('Shark');
+
+    // setInterval(function(){
+    //   var englishWord = document.getElementById('message');
+    //   window.alert(englishWord.value);
+    // }, 7000);
+
+    // window.alert('Введи переклад в поле вводу');
+    // window.alert('Duck');
+
+    // setInterval(function(){
+    //   var englishWord = document.getElementById('message');
+    //   window.alert(englishWord.value);
+    // }, 7000);
+
+
+  
+
+    </script>
+  </div>
+</body>
