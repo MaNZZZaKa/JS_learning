@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced_search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./3-scss/3-page.css" />
+    <style>
+        body{
+            font-family: sans-serif, Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <!-- header -->
+        <div class="header">
+            <!-- left side with linked picture -->
+            <div>
+                <a href="file:///G:/JavaScript_less/google_project/1-search/1-page.html"><img src="./3-img/googlesmalllogo.svg" alt="Sorry, server isn't available" /></a>
+            </div>
+
+            <!-- right side could be  profile picture and icon with 'dots' -->
+            <div></div>
+        </div>
+
+        <!-- second header -->
+        <div>
+            <label class="sec-header">Розширений пошук</label>
+        </div>
+
+        <hr style="color: grey;"/>
+        <form action="https://images.google.com/images">
+            <!-- main search -->
+            <div class='main-search'>
+                <!-- prescription to search fields -->
+                <div>
+                    <div class='prescr-discr-preview' style="padding-left: 20px;">Знайти сторінки з</div>
+                    <div class='prescr-divs'>усі ці слова:</div>
+                    <div class='prescr-divs'>точне слово або фразу:</div>
+                    <div class='prescr-divs'>будь-яке з цих слів:</div>
+                    <div class='prescr-divs'>жодне з цих слів:</div>
+                    <div style="width: 150px;"></div>
+                </div>
+        
+                <!-- searching fields -->
+                <div class="col-lg-5">
+                    <div class='all-divs'>
+                    </div>
+                    <div class='all-divs'>
+                        <input type="text" name="as_q" class="main_field_for_search"  placeholder="Введіть пошуковий запит" />
+                    </div>
+                    <div class='all-divs'>
+                        <input type="text" name="as_epq" class="main_field_for_search"  placeholder="Введіть пошуковий запит" />
+                    </div>
+                    <div class='all-divs'>
+                        <input type="text" name="as_oq" class="main_field_for_search"  placeholder="Введіть пошуковий запит" />
+                    </div>
+                    <div class='all-divs'>
+                        <input type="text" name="as_eq" class="main_field_for_search"  placeholder="Введіть пошуковий запит" />
+                    </div>
+                    <div class='all-divs' style="text-align: right;">
+                        <input class="buttons" type="submit" value="Розширений пошук" />
+                    </div>
+                </div>
+        
+                <!-- discription how search should work -->
+                <div>
+                    <div class='prescr-discr-preview'>Як це зробити в полі пошуку</div>
+                    <div class='all-divs'><span style="padding-left: 10px;">Введіть важливі слова: <strong>триколірний рет-тер’єр</strong></span></div>
+                    <div class='all-divs'><span style="padding-left: 10px;">Візьміть точні слова в лапки: <strong>"рет-тер’єр"</strong></span></div>
+                    <div class='all-divs'><span style="padding-left: 10px;">Введіть OR між усіма потрібними словами: <strong>мініатюрні OR стандартні</strong></span></div>
+                    <div class='all-divs'><span style="padding-left: 10px;">Поставте знак мінус перед небажаними словами: <strong>-гризун, -"Джек Рассел"</strong></span></div>
+                    <div class='all-divs'></div>
+        
+                </div>
+        
+            </div>
+            
+        </form>
+        <hr style="color: grey;"/>
+
+    </div>
+</body>
+</html>
