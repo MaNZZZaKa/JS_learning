@@ -15,29 +15,4 @@ const changeBackgroundColor = () => {
 
 changeBackgroundColor();
 
-const menu = [
-  {
-    title: "Cake",
-    price: 56
-  }, 
-  {
-    title: "Ice",
-    price: 56
-  } 
-]
-
-// const mainContainer = document.getElementById()
-
-let result = "";
-
-menu.map((bludo) => {
-  const { title, price } = bludo
-
-  result += `
-    <div>${title}</div>
-  `
-})
-
-console.log(result)
-
 
