@@ -1,0 +1,85 @@
+.text-autumn, .text-summer, .text-spring, .text-winter {
+  left: 50%;
+  position: absolute;
+  font-family: "Verdona";
+  font-size: 10vw;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  transform: scale(1) translate(-50%, 10%);
+}
+
+.section-autumn::before, .section-summer::before, .section-spring::before, .section-winter::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+html {
+  height: 100vh;
+  overflow: hidden;
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding-bottom: 0;
+  background: #222;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.section-winter, .section-spring, .section-summer {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.section-winter::before {
+  background: url("../img/winter.jpg");
+  transform: translateZ(-1px) scale(3);
+  -moz-transform: translateX(3%);
+}
+
+.section-spring::before {
+  background: url("../img/spring.jpg");
+  box-shadow: inset 0 20px 20px rgb(226, 111, 136);
+  transform: translateZ(-1px) scale(4) translate(0%, 50%);
+}
+
+.section-summer::before {
+  background: url("../img/summer.jpg");
+  transform: translateZ(-1px) scale(4) translate(10%, 110%);
+  box-shadow: inset 0 20px 20px #6c622c;
+}
+
+.section-autumn::before {
+  width: 100vw;
+  background: url("../img/autumn.jpg");
+  transform: translateZ(-1px) scale(1) translate(0%, 500%);
+  box-shadow: inset 0 20px 20px grey;
+}
+
+.text-winter {
+  top: 25rem;
+}
+
+.text-spring {
+  top: 175rem;
+}
+
+.text-summer {
+  top: 400rem;
+}
+
+.text-autumn {
+  top: 800rem;
+}/*# sourceMappingURL=parallax.css.map */

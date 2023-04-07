@@ -1,0 +1,162 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, sans-serif;
+  font-size: 100%;
+  background-color: #416a7a;
+  margin: 0;
+  height: 100vh;
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: rgb(250, 250, 250);
+  width: 650px;
+  height: 720px;
+  border: 1px solid hidden;
+  border-radius: 12px;
+}
+.reg-form .colour-buttons {
+  background-color: rgb(20, 180, 140);
+  border: solid 1px white;
+  border-radius: 4px;
+  color: white;
+}
+.reg-form .submit-button-container {
+  height: auto;
+  display: flex;
+  justify-content: right;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eff0f2;
+  border-top: 1px solid rgba(101, 102, 104, 0.2);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.reg-form .submit-button-container .submit-button {
+  height: 40px;
+  width: 100px;
+}
+
+.form-discr-container {
+  margin: 0;
+  text-align: center;
+  background-color: #eff0f2;
+  border-bottom: 2px solid rgba(101, 102, 104, 0.2);
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.form-discr {
+  margin: 20px 0 20px 0;
+  padding: 0;
+  color: #656668;
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-size: 29px;
+  line-height: 40px;
+}
+
+.form-main-container {
+  display: flex;
+  align-content: stretch;
+  margin: 0;
+  padding: 0 30px 0 30px;
+}
+.form-main-container .disc-label {
+  color: rgb(20, 180, 140);
+  font-size: large;
+  font-weight: 500;
+}
+.form-main-container .lines {
+  border: 1px solid rgba(101, 102, 104, 0.2);
+  border-radius: 4px;
+}
+.form-main-container .form-main {
+  padding: 20px 10px 30px 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, [column] 290px);
+  grid-template-rows: repeat(7, [row] auto);
+  margin: 0;
+}
+.form-main-container .form-main .grid-layer-fname {
+  grid-column: column;
+  grid-row: row;
+}
+.form-main-container .form-main .grid-layer-lname {
+  grid-column: column 2;
+  grid-row: row;
+}
+.form-main-container .form-main .grid-layer-email {
+  grid-column: column/span 2;
+  grid-row: row 2;
+}
+.form-main-container .form-main .grid-layer-pass {
+  grid-column: column;
+  grid-row: row 3;
+}
+.form-main-container .form-main .grid-layer-pass-conf {
+  grid-column: column 2;
+  grid-row: row 3;
+}
+.form-main-container .form-main .grid-layer-gender {
+  grid-column: column;
+  grid-row: row 4;
+}
+.form-main-container .form-main .grid-layer-hobbies {
+  grid-column: column 2;
+  grid-row: row 4;
+}
+.form-main-container .form-main .grid-layer-src-income {
+  grid-column: column;
+  grid-row: row 5;
+}
+.form-main-container .form-main .grid-layer-income {
+  grid-column: column 2;
+  grid-row: row 5;
+}
+.form-main-container .form-main .grid-layer-user-pict {
+  grid-column: column;
+  grid-row: row 6;
+}
+.form-main-container .form-main .grid-layer-age {
+  grid-column: column 2;
+  grid-row: row 6;
+}
+.form-main-container .form-main .grid-layer-bio {
+  grid-column: column/span 2;
+  grid-row: row 7;
+}
+.form-main-container .form-main .form-main-fname, .form-main-container .form-main .form-main-lname, .form-main-container .form-main .form-main-pass, .form-main-container .form-main .form-main-pass-conf, .form-main-container .form-main .form-main-gender,
+.form-main-container .form-main .form-main-hobbies, .form-main-container .form-main .form-main-src-income, .form-main-container .form-main .form-main-income, .form-main-container .form-main .form-main-user-pict, .form-main-container .form-main .form-main-age {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+.form-main-container .form-main .form-main-gender-text, .form-main-container .form-main .form-main-hobbies-text {
+  font-style: normal;
+  font-size: smaller;
+}
+.form-main-container .form-main .form-main-income-slider {
+  width: 235px;
+  background-color: rgba(101, 102, 104, 0.8);
+}
+.form-main-container .form-main .form-main-email, .form-main-container .form-main .form-main-bio {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+.form-main-container .form-main textarea {
+  height: 90px;
+}
+
+.form-main-pict-button {
+  font-size: small;
+  border: 1px solid rgba(101, 102, 104, 0.2);
+  border-radius: 4px;
+}/*# sourceMappingURL=form.css.map */

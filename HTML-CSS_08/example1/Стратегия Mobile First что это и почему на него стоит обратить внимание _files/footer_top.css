@@ -1,0 +1,163 @@
+/* Footer top */
+.footerTop {
+	color: #646468;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	background: #1e2028;
+	padding: 4em 0 1.5em;
+}
+
+.footerTop__linksColumn {
+	width: 198px;
+}
+.footerTop__linksColumn {
+	color: #fff;
+	font-size: 14px;
+}
+.footerTop__linksColumn h4 {
+	font-size: 14px;
+	margin: 0 0 1em;
+}
+.footerTop__linksColumn ul {
+	list-style: none;
+	margin: 0 0 1.5em 0;
+}
+.footerTop__linksColumn li {
+	padding: 4px 0;
+}
+.footerTop__linksColumn a,
+.footerTop__linksColumn span {
+	color: #646468;
+	font-size: 14px;
+	text-decoration: none;
+}
+.footerTop__linksColumn a:hover {
+	color: #fff;
+	border-bottom: 2px solid #f98500;
+}
+
+.footerTop__langs {
+	width: 80px;
+}
+
+.footerTop__langs__select {
+	width: 60px;
+}
+
+.footerTop__langs .selectric {
+	background: #373944;
+	border: 1px solid #373944;
+	border-radius: 6px;
+}
+.footerTop__langs .selectric-open .selectric {
+	border: 1px solid #373944;
+}
+
+.footerTop__langs .selectric .button {
+	background: transparent;
+	height: 30px;
+	width: 20px;
+}
+
+.footerTop__langs .selectric .label {
+	background: transparent;
+	color: #626468;
+	height: 25px;
+	line-height: 25px;
+	margin: 0;
+	font-size: 14px;
+	padding-left: 6px;
+	font-weight: normal;
+}
+
+.footerTop__langs .selectric-wrapper {
+	width: 55px;
+}
+
+.footerTop__langs .selectric-items {
+	background: #373944;
+	border: 1px solid #373944;
+	top: 80%;
+	border-radius: 6px;
+	left: -23px;
+	width: 100% !important;
+	padding: 5px 0 5px 22px;
+}
+
+.footerTop__langs .selectric-scroll {
+	overflow: visible !important;
+}
+
+.footerTop__langs .selectric-items li {
+	height: 22px;
+	padding: 5px 9px;
+	text-align: left;
+	line-height: 22px;
+	font-size: 14px;
+	margin-left: -23px;
+	position: relative;
+	padding: 5px 0;
+}
+/*height: 14px;*/
+/*background-position: -4295px 0*/
+.footerTop__langs .selectric-items li.highlighted.selected,
+.footerTop__langs .selectric-items li:hover {
+	background: #41454e;
+	color: #fff;
+}
+
+.footerTop__langs .flag {
+	display: inline-block;
+	background: url(https://static.lpgenerator.ru/media/app/src/wrapper/resource/img/flags.png);
+	vertical-align: middle;
+	margin: 0 8px;
+	border-radius: 100%;
+	width: 14px;
+	height: 14px;
+}
+
+.footerTop__langs .flag.f_ru {
+	height: 14px;
+	background-position: -4295px 0
+}
+
+.footerTop__langs .flag.f_en {
+	height: 11px;
+	background-position: -5241px 0
+}
+
+.footerTop__langs .flag.f_pl {
+	height: 13px;
+	background-position: -4031px 0;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.footerTop .column {
+		padding-left: 32px;
+	}
+	.footerTop .column:first-child {
+		padding-left: 0;
+	}
+	.footerTop__linksColumn.column {
+		float: left;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.footerTop__twoColumns.column {
+		padding-left: 0;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.footerTop__twoColumns.column {
+		float: left;
+	}
+}
+
+@media only screen and (min-width: 960px) and (max-width: 980px) {
+	.footerTop__linksColumn {
+		width: 206px;
+	}
+}

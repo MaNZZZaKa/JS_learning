@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300;1,500;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./sass/calusel.css">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <div class="carousel">
+      <ul class="slides">
+
+        <!-- winter season container -->
+        <input type="radio" name="radio-buttons" id="img-1" checked />
+        <li class="slide-container">
+          <!-- image  and dicription winter-->
+          <div class="slide-image">
+            <img src="./img/winter.jpg">
+            <div class="slide-text">
+              <h3>Winter</h3>
+              <p>Winter is the coldest season of the year in polar and temperate climates. It occurs after autumn and before spring. The tilt of Earth's axis causes seasons; winter occurs when a hemisphere is oriented away from the Sun. Different cultures define different dates as the start of winter, and some use a definition based on weather. </p>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <label for="img-3" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+
+        <!-- spring season container -->
+        <input type="radio" name="radio-buttons" id="img-2"/>
+        <li class="slide-container">
+          <!-- image  and dicription spring-->
+          <div class="slide-image">
+            <img src="./img/spring.jpg">
+            <div class="slide-text">
+              <h3>Spring</h3>
+              <p>Spring, also known as springtime, is one of the four temperate seasons, 
+                succeeding winter and preceding summer. There are various technical definitions 
+                of spring, but local usage of the term varies according to local climate, 
+                cultures and customs.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <label for="img-1" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-3" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+
+        <!-- summer season container -->
+        <input type="radio" name="radio-buttons" id="img-3"/>
+        <li class="slide-container">
+          <!-- image  and dicription-->
+          <div class="slide-image">
+            <img src="./img/summer.jpg">
+            <div class="slide-text">
+              <h3>Summer</h3>
+              <p>Summer is the hottest of the four temperate seasons, 
+                occurring after spring and before autumn. At or centred 
+                on the summer solstice, daylight hours. 
+              </p>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <label for="img-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-1" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+
+        <!-- manual scroling dots -->
+        <div class="carousel-dots">
+          <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+          <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+          <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+        </div>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

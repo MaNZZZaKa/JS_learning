@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html class="lang-ru site-ru popmechanic-desktop popmechanic-landscape popmechanic-loaded" lang="ru"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+
+	<meta charset="utf-8">
+
+	
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	
+	<title>Стратегия Mobile First: что это и почему на него стоит обратить внимание?</title>
+	<meta name="description" content=" Пользуясь мобильным интернетом, вы, возможно, замечали, что некоторые сайты выглядят лучше, чем другие, а какие-то и вовсе не работают. Может быть, вы даже обратили внимание на такой интересный момент — независимо от количества контента, одни страницы грузятся быстро, а какие-то, наоборот, очень медленно. Странно, правда?Конечно, скорость интернета, как и хостинг, ... ">
+
+	<meta property="og:title" content=" Стратегия Mobile First: что это и почему на него стоит обратить внимание? ">
+	<meta property="og:image" content="https://media.lpgenerator.ru/uploads/2016/03/14/image04__.png">
+	<meta property="og:description" content=" Пользуясь мобильным интернетом, вы, возможно, замечали, что некоторые сайты выглядят лучше, чем другие, а какие-то и вовсе не работают. Может быть, вы даже обратили внимание на такой интересный момент — независимо от количества контента, одни страницы грузятся быстро, а какие-то, наоборот, очень медленно. Странно, правда?Конечно, скорость интернета, как и хостинг, ... ">
+	
+
+
+
+	
+			<link rel="shortcut icon" type="image/png" href="https://static.lpgenerator.ru/media/favicon.png">
+	
+
+	<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/bootstrap.css" rel="stylesheet" type="text/css" media="screen,projection">
+	<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/icons.css" rel="stylesheet" type="text/css">
+	<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/base_anon.css" rel="stylesheet" type="text/css" media="screen,projection">
+
+	
+		
+		<!-- BEGIN Tynt Script -->
+<script type="text/javascript" async="" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/gsp.js"></script><script async="" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/google-analytics_analytics_002.js"></script><script type="text/javascript" async="" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/watch.js"></script><script type="text/javascript" async="" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/8b75c0bee81435dea05ba6e1f9e0510dcbcff557.2.js"></script><script type="text/javascript" async="" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/i.js"></script><script async="" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/google-analytics_analytics.js"></script><script type="text/javascript">
+	if(document.location.protocol=='http:'){
+		var Tynt=Tynt||[];Tynt.push('aV5WqOTGar4zzbacwqm_6l');Tynt.i={"ap":"Read more:"};
+		(function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();
+	}
+</script>
+<!-- END Tynt Script -->
+
+		
+		
+<!-- Kissmetrics tracking snippet -->
+<script type="text/javascript">var _kmq = _kmq || [];
+var _kmk = _kmk || '8b75c0bee81435dea05ba6e1f9e0510dcbcff557';
+function _kms(u){
+  setTimeout(function(){
+    var d = document, f = d.getElementsByTagName('script')[0],
+    s = d.createElement('script');
+    s.type = 'text/javascript'; s.async = true; s.src = u;
+    
+    f.parentNode.insertBefore(s, f);
+  }, 1);
+}
+_kms('//i.kissmetrics.com/i.js');
+_kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
+
+</script>
+
+
+
+
+		
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-23001717-1', 'auto');
+ga(function(tracker) {
+ var clientId = tracker.get('clientId'); // получение clientId из Google Analytics
+ document.cookie = "_ga_cid=" + clientId + "; path=/"; // сохранение cookie в _ga_cid
+ ga('set', 'dimension1', clientId); //запись clientId для каждого пользователя
+});
+
+    ga('set', 'dimension3', 'Guest');
+
+
+ga('set', 'dimension2', 'None');
+ga('send', 'pageview');
+</script>
+
+
+		<!--Start of PopMechanic script-->
+<script id="popmechanic-script" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/loader.js"></script><link rel="stylesheet" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/styles.css"><script async="" defer="defer" charset="utf-8" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/forms.js"></script>
+<!--End of PopMechanic script-->
+
+		
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter17937001 = new Ya.Metrika({id:17937001, enableAll: true, webvisor:true});
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/17937001" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+
+		
+	<script type="text/javascript">
+		window.isVKReady = false;
+		window.vkAsyncInit = function() {
+			if ( window.location.search.indexOf( 'js_debug' ) !== -1 ) {
+				console.log( 'VK open API loaded' );
+			}
+			VK.Retargeting.Init('VK-RTRG-5887-fNYGp');
+			window.isVKReady = true;
+			document.dispatchEvent( new Event( 'vkApiInitiated' ) );
+		};
+		(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-5887-fNYGp';
+	</script>
+	<script src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/openapi.js" type="text/javascript" async=""></script>
+
+
+		<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type="text/javascript">
+var _vwo_code=(function(){
+var account_id=186380,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script><script src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/j" type="text/javascript"></script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+		<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/gde_slon.js" async=""></script>
+<script>
+    window.gdeslon_q = window.gdeslon_q || [];
+</script>
+	
+
+
+	
+    
+	<link type="text/css" rel="stylesheet" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/shCore.css">
+	<link type="text/css" rel="stylesheet" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/shThemeDefault.css">
+	<link rel="pingback" href="https://lpgenerator.ru/xmlrpc/">
+	<link rel="EditURI" type="application/rsd+xml" href="https://lpgenerator.ru/blog/rsd.xml">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://lpgenerator.ru/blog/wlwmanifest.xml">
+	<link rel="alternate" type="application/rss+xml" title="RSS лента последних записей" href="https://feeds.feedburner.com/LPgenerator">
+
+	<script type="text/javascript">
+		try {
+			VK.init({apiId: 2256162, onlyWidgets: true});
+		} catch ( e ) {}
+	</script>
+
+    <link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/css.css" rel="stylesheet">
+	<link rel="stylesheet" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/lightbox.min.css">
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed of discussions on 'Стратегия Mobile First: что это и почему на него стоит обратить внимание?'" href="https://lpgenerator.ru/blog/feeds/discussions/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/">
+	<link rel="alternate" type="application/rss+xml" title="RSS лента комментариев к 'Стратегия Mobile First: что это и почему на него стоит обратить внимание?'" href="https://lpgenerator.ru/blog/feeds/comments/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/">
+	<link rel="alternate" type="application/rss+xml" title="RSS лента пинбэков к 'Стратегия Mobile First: что это и почему на него стоит обратить внимание?'" href="https://lpgenerator.ru/blog/feeds/pingbacks/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/">
+	<link rel="alternate" type="application/rss+xml" title="RSS лента трэкбэков к 'Стратегия Mobile First: что это и почему на него стоит обратить внимание?'" href="https://lpgenerator.ru/blog/feeds/trackbacks/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/">
+
+
+	
+
+	
+
+	
+
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/lpg.js"></script>
+	<script>
+		if ( !LPG ) {
+			var LPG = {};
+		}
+		LPG.MEDIA_URL = '//media.lpgenerator.ru/';
+		LPG.STATIC_URL = '//static.lpgenerator.ru/media/';
+		LPG.LOCALE = 'ru';
+
+		LPG.namespace('LPG.utms');
+		LPG.utms = {
+			medium: 'post'
+		};
+
+		LPG.namespace('LPG.config');
+		LPG.config.fixedMenu = {
+			alwaysVisible: true
+		};
+	</script>
+	
+<script type="text/javascript" async="" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/embed.js"></script><link rel="prefetch" as="style" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/a_data_002/lounge.2330dfe9833fc6fa82fa0ffee36e8c21.css"><link rel="prefetch" as="script" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/a_data_002/common.bundle.c11615d75a9d8a7ebcb6b388206979fc.js"><link rel="prefetch" as="script" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/a_data_002/lounge.bundle.944405f46b741461538725b083516e4d.js"><link rel="prefetch" as="script" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/a_data_002/config.js"><script src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/alfie_v4.63f1ab6d6b9d5807dc0c94ef3fe0b851.js" async="" charset="UTF-8"></script></head>
+
+<body style="" class="respOn blog entryFull popmechanic-desktop" itemscope="" itemtype="http://schema.org/WebPage"><div id="popmechanic-snippet" style="height: 0; min-height: 0;"></div>
+	
+
+	<!-- header -->
+	<div class="topSpacer"></div>
+	<!-- /header -->
+
+	<!-- top cta -->
+	
+	
+
+
+
+
+	<!--noindex-->
+		<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/blog_offer_vitamin.css" rel="stylesheet" type="text/css">
+
+<div class="blog__offer vitamin">
+    <div class="container posRel">
+        <div class="blog__offer__arts">
+            <div class="blog__offer__arts__art-girl"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/girl_figure.svg" alt=""></div>
+        </div>
+        <div class="blog__offer__content posRel">
+            <div class="blog__offer__logo"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/vitamin_logo.svg" alt="vitamin tools logo"></div>
+            <div class="title">
+                Vitamin – сервис для <b class="fYellow">выгодного</b> управления вашей рекламой
+			</div>
+            <div class="blog__offer__lists_cont clearfix">
+                <ul>
+                    <li class="yellow">Все популярные рекламные сети <b class="fYellow">в одном окне</b></li>
+                    <li class="blue">Агентское <b class="fYellow">вознаграждение до 16%</b> на личный счет или рекламу</li>
+                    <li class="magenta"><b class="fYellow">Любые</b> дополнительные услуги под ваши потребности
+					</li><li class="yellow">Бесплатное <b class="fYellow">обучение маркетингу</b></li>
+
+                </ul>
+            </div>
+            <div class="blog__offer__button_cont mt20">
+                <a href="https://vitamin.tools/?utm_source=lpgenerator_main&amp;utm_medium=banner&amp;utm_content=moreinfo" class="button large magenta" data-kiss-value="details" target="_blank">Хочу Vitamin!</a>
+            </div>
+        </div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--/noindex-->
+
+
+
+	<!-- /top cta -->
+
+	<!-- content -->
+	<div class="content">
+		
+			<div class="container">
+	
+	
+
+
+	<style>
+	  ol.crumbs { list-style: none; display:block; margin: 0; font-size: 12px; }
+	  ol.crumbs li { display: inline-block; }
+	</style>
+	<ol class="crumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+		<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="https://lpgenerator.ru/"><span itemprop="name">Главная</span></a> &gt;
+			 <meta itemprop="position" content="1">
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="https://lpgenerator.ru/blog"><span itemprop="name">Блог</span></a> &gt;
+			 <meta itemprop="position" content="2">
+		</li>
+		
+		<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="https://lpgenerator.ru/blog/categories/optimizaciya-konversii/"><span itemprop="name">CRO</span></a> &gt;
+			 <meta itemprop="position" content="3">
+		</li>
+		
+		<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="https://lpgenerator.ru/blog/2016/03/16/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/"><span itemprop="name">Стратегия Mobile First: что это и почему на него стоит обратить внимание?</span></a>
+			 <meta itemprop="position" content="4">
+		</li>
+	</ol>
+	
+
+<div class="blog__content__topNav clearfix text-center">
+	<span class="button extraLarge transparent blog__content__showCatButton"><i class="a_ico menu_light_blue_mini mr8"></i><span class="vam">ВЫБРАТЬ КАТЕГОРИЮ</span></span>
+	
+
+<div class="blog__content__categoryList categoryList_all text-left">
+	<a href="https://lpgenerator.ru/blog/" title="Все статьи"><span class="dib vam">Все статьи</span></a><a href="https://lpgenerator.ru/blog/categories/inbound-marketing/" title="Маркетинг"><span class="dib vam">Маркетинг</span></a><a href="https://lpgenerator.ru/blog/categories/landing-page-design/" title="Дизайн и брендинг"><i class="a_ico star_orange_mini mr5"></i><span class="dib vam">Дизайн и брендинг</span></a><a href="https://lpgenerator.ru/blog/categories/kontekstnaya-reklama/" title="Digital-реклама"><span class="dib vam">Digital-реклама</span></a><a href="https://lpgenerator.ru/blog/categories/kontekstnaya-reklama/socseti/" title="SMM"><span class="dib vam">SMM</span></a><a href="https://lpgenerator.ru/blog/categories/kontekstnaya-reklama/metodologiya-prodazh/" title="Методология продаж"><span class="dib vam">Методология продаж</span></a><a href="https://lpgenerator.ru/blog/categories/kontekstnaya-reklama/seo-i-targeting/" title="SEO и таргетинг"><span class="dib vam">SEO и таргетинг</span></a><a href="https://lpgenerator.ru/blog/categories/kontekstnaya-reklama/seo-i-targeting/kopirajting/" title="Копирайтинг"><span class="dib vam">Копирайтинг</span></a><a href="https://lpgenerator.ru/blog/categories/optimizaciya-konversii/" title="CRO"><span class="dib vam">CRO</span></a><a href="https://lpgenerator.ru/blog/categories/optimizaciya-konversii/generaciya-lidov/" title="Лидогенерация"><span class="dib vam">Лидогенерация</span></a><a href="https://lpgenerator.ru/blog/categories/optimizaciya-konversii/neuromarketing/" title="Психология"><span class="dib vam">Психология</span></a><a href="https://lpgenerator.ru/blog/categories/optimizaciya-konversii/usability/" title="UI/UX"><span class="dib vam">UI/UX</span></a><a href="https://lpgenerator.ru/blog/categories/optimizaciya-konversii/usability/mobile-landing-page/" title="Mobile first"><span class="dib vam">Mobile first</span></a><a href="https://lpgenerator.ru/blog/categories/business-analytics/" title="Аналитика и управление компанией"><span class="dib vam">Аналитика и управление компанией</span></a><a href="https://lpgenerator.ru/blog/categories/business-analytics/startups/" title="Стартапы и гроуз хакинг"><span class="dib vam">Стартапы и гроуз хакинг</span></a><a href="https://lpgenerator.ru/blog/categories/business-analytics/psihologiya-cenoobrazovaniya/" title="Прайсинг"><span class="dib vam">Прайсинг</span></a><a href="https://lpgenerator.ru/blog/categories/business-analytics/podderzhka-i-cx/" title="Поддержка и CX"><span class="dib vam">Поддержка и CX</span></a><a href="https://lpgenerator.ru/blog/categories/video-marketing/" title="Видеомаркетинг"><span class="dib vam">Видеомаркетинг</span></a><a href="https://lpgenerator.ru/blog/categories/obyazatelnaya-informaciya-dlya-polzovatelei-lpgenerator/" title="Туториалы LPgenerator"><span class="dib vam">Туториалы LPgenerator</span></a><a href="https://lpgenerator.ru/blog/categories/obyazatelnaya-informaciya-dlya-polzovatelei-lpgenerator/kejsy/" title="Кейсы"><span class="dib vam">Кейсы</span></a>
+<select class="blog__content__categoryList__select"><option selected="selected" disabled="disabled">Перейти к другой категории</option><option value="/blog/categories/inbound-marketing/">Маркетинг</option><option value="/blog/categories/landing-page-design/">Дизайн и брендинг</option><option value="/blog/categories/kontekstnaya-reklama/">Digital-реклама</option><option value="/blog/categories/kontekstnaya-reklama/socseti/">SMM</option><option value="/blog/categories/kontekstnaya-reklama/metodologiya-prodazh/">Методология продаж</option><option value="/blog/categories/kontekstnaya-reklama/seo-i-targeting/">SEO и таргетинг</option><option value="/blog/categories/kontekstnaya-reklama/seo-i-targeting/kopirajting/">Копирайтинг</option><option value="/blog/categories/optimizaciya-konversii/">CRO</option><option value="/blog/categories/optimizaciya-konversii/generaciya-lidov/">Лидогенерация</option><option value="/blog/categories/optimizaciya-konversii/neuromarketing/">Психология</option><option value="/blog/categories/optimizaciya-konversii/usability/">UI/UX</option><option value="/blog/categories/optimizaciya-konversii/usability/mobile-landing-page/">Mobile first</option><option value="/blog/categories/business-analytics/">Аналитика и управление компанией</option><option value="/blog/categories/business-analytics/startups/">Стартапы и гроуз хакинг</option><option value="/blog/categories/business-analytics/psihologiya-cenoobrazovaniya/">Прайсинг</option><option value="/blog/categories/business-analytics/podderzhka-i-cx/">Поддержка и CX</option><option value="/blog/categories/video-marketing/">Видеомаркетинг</option><option value="/blog/categories/obyazatelnaya-informaciya-dlya-polzovatelei-lpgenerator/">Туториалы LPgenerator</option><option value="/blog/categories/obyazatelnaya-informaciya-dlya-polzovatelei-lpgenerator/kejsy/">Кейсы</option></select></div>
+
+	<div class="blog__content__underlistButtons g_offset_t-1">
+        <a class="button extraLarge lightBlue" style="font-size:13px;" href="https://lpgenerator.ru/blog/2019/08/01/kak-opublikovat-statyu-v-bloge-lpgenerator/" target="_blank"><i class="a_ico list_w_pen_light_blue_mini mr8"></i><span class="vam">СТАТЬ ГОСТЕВЫМ АВТОРОМ</span></a><a class="button extraLarge transparent" href="https://lpgenerator.ru/eco/?utm_source=lpg_blog&amp;utm_medium=button&amp;utm_campaign=lpg_blog_eco" target="_blank"><i class="a_ico gift_light_blue_mini mr8"></i><span class="vam">АКЦИИ ОТ ПАРТНЕРОВ</span></a>
+		<div style="margin-top: 12px;">
+			<a href="https://t.me/lpgenerator_blog" target="_blank"><img style="height: 50px; padding-right: 10px;" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/icon_blog_tg_big.svg" alt=""></a>
+			<a href="https://vk.com/lpgenerator" target="_blank"><img style="height: 50px;" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/icon_blog_vk_big.svg" alt=""></a>
+		</div>
+	</div>
+</div>
+
+<div class="blog__content__search">
+	<form method="get" id="searchform" action="/blog/search/">
+		<input type="search" class="blog__content__search__input" placeholder="Искать в блоге" name="pattern" id="searchbox" onfocus="this.value=''"><!--
+		--><button type="submit" class="blog__content__search__submit g_cell-1"><i class="a_ico search_gray_mini"></i><i class="a_ico search_gray_micro"></i></button>
+	</form>
+</div>
+
+
+
+
+	<div class="blog__content__entriesList">
+		
+	<article id="entry-3516" class="blog__content__entriesList__entryFull ma clearfix" itemprop="mainEntity" itemscope="" itemtype="http://schema.org/Article">
+		<div class="entry-header" itemprop="headline">
+			<h1 class="entry-title" itemprop="name">Стратегия Mobile First: что это и почему на него стоит обратить внимание?</h1>
+		</div>
+		
+			<div class="blog__content__entriesList__entryFull_body clearfix" itemprop="articleBody">
+				<p>Пользуясь мобильным интернетом, вы, возможно, замечали, что 
+некоторые сайты выглядят лучше, чем другие, а какие-то и вовсе не 
+работают. Может быть, вы даже обратили внимание на такой интересный 
+момент — независимо от количества контента, одни страницы грузятся 
+быстро, а какие-то, наоборот, очень медленно. Странно, правда?</p><p>Конечно,
+ скорость интернета, как и хостинг, могут играть определенную роль, но 
+чаще всего скорость загрузки страницы зависит от того, как она была 
+построена.</p><p>Это значит, если она создавалась с учетом менее мощных 
+мобильных устройств, сайт будет грузиться без каких-либо «подводных 
+камней», которые обнаруживаются при попытках открыть его с помощью 
+гаджета.</p><p>В статье будет рассмотрено создание оптимизированного 
+сайта для различных мобильных устройств, так называемый подход Mobile 
+first (сначала мобильные).</p><p style="text-align: center;"><img alt="Стратегия Mobile First" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image04__.png" style="width: 600px; height: 174px; border-width: 1px; border-style: solid;"></p><p>Есть
+ два спорных вопроса, которые обсуждают в связи с Mobile First: 
+философия дизайна и техническая реализация. Очень важно рассматривать 
+эти два вопроса отдельно, чтобы не возникло путаницы при использовании 
+таких терминов, как «адаптивный дизайн».</p><ul><li><a href="https://lpgenerator.ru/blog/2016/02/19/mega-gid-po-trendam-mobilnogo-marketinga-v-2016-godu/">Мега-гид по трендам мобильного маркетинга в 2016 году</a></li></ul><!--more--><p><strong>Философия дизайна</strong></p><p>Исторически
+ сложилось так, что веб-дизайнеры начинают разработку дизайна сайта для 
+большого экрана, то есть первый и «главный» дизайн делается для рабочего
+ стола компьютера, так как предполагает большую функциональность.</p><p>Недостатком
+ такого подхода является то, что по существу приоритет отдается 
+пользователям компьютеров и ноутбуков, хотя по данным последних 
+исследований не менее 25% людей в США сегодня используют только 
+мобильные устройства. В другой части света, например, в сельских районах
+ Китая использование мобильного интернета достигает 45%, согласно данным
+ отчета On Device Research 2013 года.</p><p>Многие элементы дизайна и 
+функционала, которые отлично смотрятся и работают на рабочем столе 
+компьютера, просто невозможно успешно перевести на мобильный опыт— часто
+ такая попытка может сделать сайт непригодным или очень сложным в 
+использовании и навигации.</p><p>Философия дизайна Mobile first 
+переворачивает прежние представления с ног на голову. Хотя многие 
+разработчики по-прежнему начинают проектирование не с мобильных 
+устройств, но теперь они учитывают <a href="https://lpgenerator.ru/blog/2015/05/21/mobilnyj-yuzabiliti-vozmozhnosti-i-ogranicheniya/">возможности и ограничения их экранов</a>, создавая дизайн сайта.</p><p>В
+ связи с тем, что экран мобильного устройства меньше, чем компьютера, 
+данный подход использует другую версию сайта, что делает актуальную 
+информацию легко доступной и позволяет скрыть или устранить все, что 
+мешает процессу продаж.</p><p>Например, представьте, что вы получили 
+письмо от Best Buy, в котором рекламируются акции выходного дня. 
+Переходя по ссылке, указанной в письме, вы увидите две совершенно разные
+ версии сайта в зависимости от того, с какого устройства осуществляется 
+вход:</p><p style="text-align: center;"><img alt="Best Buy," src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image05____.jpg" style="width: 600px; height: 464px; border-width: 1px; border-style: solid;"></p><p style="margin-left: 40px;"><em>Слева – мобильная версия сайта, справа – обычная</em></p><p>Мобильная
+ версия сильно отличается от обычной. Главная картинка небольшая, а 
+вводный текст короткий, ссылки на категории товаров свернуты по 
+умолчанию и не содержат изображения, навигационные элементы чрезвычайно 
+упрощены и так далее.</p><ul><li><a href="https://lpgenerator.ru/blog/2014/08/01/optimizaciya-dizajna-mobilnyh-ustrojstv-planshety-vs-smartfony/">Оптимизация дизайна мобильных устройств: планшеты vs смартфоны</a></li></ul><p><strong>Техническая сторона вопроса</strong></p><p>С
+ технической точки зрения Mobile first может быть достигнут с помощью 
+различных тактик исполнения, включая определение на сервере агента 
+пользователя и адаптивный веб-дизайн со стороны клиента (подробнее об 
+этом позже).</p><p>Например, со стороны клиента ваш девайс обратится к 
+HTML-разметке и обнаружит CSS-файл, который учтет технические 
+требования, сообщаемые вашим устройством, и загрузит соответствующие 
+стили и другую информацию, что в значительной степени повлияет на 
+юзабилити и время загрузки в зависимости от скорости соединения (WiFi, 
+LTE, 3G и т.д.).</p><p>Важно понимать разницу между дизайном mobile 
+first и адаптивным мобильным дизайном, так как последний берет имеющиеся
+ элементы и масштабирует их под экран, но не уменьшает при этом размер 
+файла.</p><p>Таким образом, хотя адаптивный мобильный дизайн может 
+поддерживать эстетику своего обычного аналога, большой размер файлов 
+может стать причиной медленной загрузки данных сайта (подробнее об 
+адаптивном дизайне позже).</p><p><strong>Почему вам стоит обратить внимание на Mobile first?</strong></p><p>Ответ
+ прост — это поможет вам получить больше прибыли. Благодаря Mobile first
+ ваш сайт будет грузиться быстрее, а это дает множество преимуществ.</p><p>Во-первых,
+ скорость загрузки повлияет на ваш рейтинг в Google. Данная поисковая 
+система не только отдает приоритет сайтам, оптимизированным для 
+мобильных устройств, но и учитывает время открытия страниц. Компания 
+редко говорит о том, какие факторы влияют на позицию в выдаче, но в 2010
+ году публично признала, что время загрузки учитывается как один из 
+факторов.</p><p>Кроме того, использование Mobile first будет окупать 
+себя за счет денег, сэкономленных на стоимости пропускной способности. 
+Все больше и больше покупок совершается с мобильных устройств. Данные по
+ итогам продаж в Черную пятницу 2015 года показывают, что 36,6% продаж 
+пришлось на мобильные устройства. В Киберпонедельник этот показатель 
+составил 26%.</p><p>Добавим к этому статистические данные о глобальном 
+доступе в интернет, согласно которым использование мобильного интернета 
+значительно превосходит выход в сеть через домашние устройства. Теперь 
+вы понимаете, почему Moble first может принести реально ощутимые выгоды 
+для вашего онлайн бизнеса.</p><p style="text-align: center;"><img alt=" Mobile first" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image01__.png" style="width: 600px; height: 446px; border-width: 1px; border-style: solid;"></p><p style="margin-left: 40px;"><em>Увеличение доли онлайн-продаж в Черную пятницу с 2010 по 2015 год</em></p><p>Оптимизация
+ для мобильных устройств сегодня настолько важна, что некоторые компании
+ даже применяют скоростные ограничения для имитации медленных соединений
+ при передаче данных. Например, Facebook устраивает «2G вторники», чтобы
+ дать возможность своей UX команде оценить пользовательский опыт на 
+мобильных устройствах многих людей по всему миру, которые либо не могу 
+себе позволить высокоскоростной интернет, либо он просто не доступен.</p><p style="text-align: center;"><img alt=" Mobile first" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image00___.png" style="width: 539px; height: 209px; border-width: 1px; border-style: solid;"></p><p style="margin-left: 40px;"><em>Начините с мобильной версии сайта</em></p><p>Как
+ отмечалось выше, подход Mobile first в простых терминах означает, что 
+вместо того чтобы исходить из полноценного функционала для рабочего 
+стола компьютера, который затем уменьшается с учетом масштабов других 
+мобильных устройств, вы начинаете с красивого и функционального 
+мобильного сайта.</p><p>Следовательно, вам придется переосмыслить 
+пользовательский опыт с нуля, учитывая ограниченное пространство, размер
+ файлов и т. д. В идеале, на вашем мобильном сайте не должно быть ничего
+ лишнего.</p><p>Для этого начните с самых важных, основополагающих 
+элементов и продолжайте свой путь вверх (процесс, называемый 
+прогрессивное улучшение).</p><p>В то же время, прогрессивное улучшение 
+(progressive enhancement) — это просто другое название адаптивного 
+дизайна. Термин впервые ввел в 2011 году Аарон Густафсон (Aaron 
+Gustafson) в книге «Adaptive Web Design: Crafting Rich Experiences with 
+Progressive Enhancement». В книге есть полезные примеры разработки 
+HTML-разметки, CSS и JavaScript, она рекомендуется к прочтению.</p><p>С прогрессивным улучшением такие вещи, как визуальная иерархия, приобретают совершенно новый смысл и значение:</p><p style="text-align: center;"><img alt=" Mobile first" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image02__.png" style="width: 600px; height: 400px; border-width: 1px; border-style: solid;"></p><p>Кнопки, макеты, размеры и меню— все выглядит иначе с этой точки зрения.</p><p>На
+ рабочем столе компьютера вы можете получить идеальную точность до 
+пикселя с помощью движений мышки. На мобильном устройстве именно пальцы 
+(«сосиски») отвечают за перемещение из точки А в точку Б. И очень 
+раздражает, когда нажимаешь меню, а вместо этого блокируешь кнопки, или 
+когда приходится прокручивать длинный текст на маленьком экране.</p><p>Эти
+ досадные просчеты, возникающие в при дизайне «сверху вниз» , легко 
+решаются путем реализации Mobile first, или прогрессивного улучшения.</p><ul><li><a href="https://lpgenerator.ru/blog/2016/03/09/pochemu-lpgenerator-ne-ispolzuet-adaptivnyj-dizajn-dlya-shablonov-lendingov/">Почему LPgenerator не использует адаптивный дизайн для шаблонов лендингов?</a></li></ul><p><strong>Несколько слов об адаптивном дизайне</strong></p><p>Плюс
+ дизайна Mobile first состоит в том, что он не конкурирует с адаптивным 
+дизайном, можно даже сказать, что они созданы друг для друга.</p><p>Адаптивный
+ дизайн строится на концепции медиа-запросов и конкретных устройств с 
+определенным размером экрана. Создавая адаптивный дизайн, вы начинаете с
+ большего (рабочий стол компьютера) и затем уменьшаете.</p><p>Дело в 
+том, что адаптивный сайт изначально предполагает просмотр на большом 
+экране. Затем, если вход осуществляется с мобильного устройства, браузер
+ скрывает или удаляет часть информации. Проблемы начинаются тогда, когда
+ значительная часть контента уже загружена независимо от того, 
+поддерживает ли имеющаяся платформа определенные характеристики. Иными 
+словами, вы предлагаете больше контента, чем необходимо для устройства, 
+которое, как правило, имеет медленное соединение.</p><p>В то же время, 
+это отличие от Mobile first, при котором сначала загружается основная 
+версия, совместимая абсолютно со всеми платформами, а затем 
+дополнительно подгружаются стили и функиционал, доступный для 
+конкретного браузера и типа платформы, в итоге приводит к результатам, 
+которые обычно выглядят лучше на всех устройствах, независимо от их 
+размера.</p><p style="text-align: center;"><img alt="Несколько слов об адаптивном дизайне" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image03__.png" style="width: 600px; height: 185px; border-width: 1px; border-style: solid;"></p><p><strong>Особые свойства мобильных устройств</strong></p><p>Всякий
+ раз, когда вы разрабатываете дизайн чего-нибудь, вы учитываете 
+различные возможности и технологии, доступные вам. Проектируя дизайн 
+сайта для компьютера, вы можете использовать сложные скрипты, для 
+загрузки которых на мобильное устройство потребуется определенное время,
+ но на компьютере они будут работать быстро.</p><p>То же самое 
+справедливо и для мобильных устройств. Мобильные телефоны делают 
+доступными особые функции, которых нет у других устройств. 
+Воспользуйтесь ими!</p><p>Подумайте об определении местоположения, событиях при нажатиях, фотокамере и т.д.</p><p>Рассмотрим,
+ например, доставку. В зависимости от того, где находится ваш склад, 
+доставка товара может занимать от нескольких дней до недели. Используя 
+точные данные о геопозиции покупателя, вы сможете предложить скидки, 
+бесплатную доставку или даже возможность самовывоза, если человек 
+находится рядом.</p><p>Возможности безграничны, нужно только мыслить шире и использовать все доступные в различных средах инструменты.</p><p><strong>Выводы</strong></p><p>Поначалу
+ необходимость разработки специальных мобильных страниц будет отнимать 
+время и усилия, но вы убедитесь, что пользователям станет проще 
+достигать определенных целей, несмотря на множество ограничивающих 
+факторов.</p><p>Другими словами, если вы поддерживаете мобильную версию 
+сайта, вашим покупателям доступно намного больше, чем в противном 
+случае. А это напрямую сказывается на вашей прибыли.</p><p>Высоких вам конверсий!</p><p style="font-size: 10px;"><em>По материалам: <a href="https://www.shopify.ca/enterprise/80431878-mobile-first-design-what-it-is-why-you-should-care" rel="nofollow" target="_blank">shopify.ca&nbsp;</a></em></p><div class="blog__content__entriesList__entryFull_body__date" itemprop="datePublished" datetime="2016-03-16T00:00:00">16-03-2016</div>
+			</div>
+
+        <div class="blog__content__entriesList__entryFull_footer g_offset_t-1">
+            <div class="blog__content__entriesList__entryFull__toCommentsBlock">
+                <h3>
+                    Понравилась статья? Поделитесь впечатлениями или расскажите о вашем опыте.
+                </h3>
+                <a class="button orange large" href="#disqus_thread">Комментировать</a>
+            </div>
+
+            <!-- AddThis Button BEGIN -->
+            <span class="addthis_sharing_toolbox" addthis:url="//lpgenerator.ru/blog/2016/03/16/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/" addthis:title="Стратегия Mobile First: что это и почему на него стоит обратить внимание?">
+                <a class="addthis_button_compact at-share-btn at-svc-compact" style="display: none;"></a>
+                <!-- кнопка addthis_button_compact пока нужна только для IE -->
+            </span>
+            <!-- AddThis Button END -->
+        </div>
+
+		<div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+			<div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+				<img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/new_logo_white.png" style="display: none;">
+				<meta itemprop="url" content="//static.lpgenerator.ru/media/css/images/new_logo_white.png?v=1.0">
+				<meta itemprop="width" content="184">
+				<meta itemprop="height" content="55">
+			</div>
+			<meta itemprop="name" content="LPgenerator">
+			<meta itemprop="telephone" content="8-800-505-72-45">
+			<meta itemprop="address" content="249038 Калужская область, город Обнинск, пр-кт Ленина, 91Б, пом.2">
+		</div>
+		<meta itemprop="dateModified" content="2016-03-14T15:14:25">
+		<meta itemscope="" itemprop="mainEntityOfPage" itemtype="schema.org/WebPage" itemid="//lpgenerator.ru/blog/2016/03/16/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/">
+    </article>
+
+	</div>
+</div>
+		
+	</div>
+	<!-- /content -->
+
+	<!-- bottom cta -->
+	
+	<div class="container">
+		
+			<div class="blog__content__entriesList entriesList_related">
+				<h3 class="text-center">Связанные записи</h3>
+				<article id="entry-4322" class="blog__content__entriesList__entryPreview post g_cell-4 dib vat posRel"><div class="blog__content__entriesList__entryPreview_imgCont posRel"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image01.jpg" title="7 стратегий создания лендингов с высокой конверсией" alt="Иллюстрация к статье: 7 стратегий создания лендингов с высокой конверсией"></div><h2 class="blog__content__entriesList__entryPreview__title text-left"><a href="https://lpgenerator.ru/blog/2016/06/30/7-strategij-sozdaniya-lendingov-s-vysokoj-konversiej/" title="7 стратегий создания лендингов с высокой конверсией" rel="bookmark">7 стратегий создания лендингов с высокой конверсией</a></h2></article><article id="entry-3328" class="blog__content__entriesList__entryPreview post g_cell-4 dib vat posRel"><div class="blog__content__entriesList__entryPreview_imgCont posRel"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image00__.jpg" title="Скорость загрузки как ключ к оптимизации мобильного опыта" alt="Иллюстрация к статье: Скорость загрузки как ключ к оптимизации мобильного опыта"></div><h2 class="blog__content__entriesList__entryPreview__title text-left"><a href="https://lpgenerator.ru/blog/2016/03/04/skorost-zagruzki-kak-klyuch-k-optimizacii-mobilnogo-opyta/" title="Скорость загрузки как ключ к оптимизации мобильного опыта" rel="bookmark">Скорость загрузки как ключ к оптимизации мобильного опыта</a></h2></article><article id="entry-3292" class="blog__content__entriesList__entryPreview post g_cell-4 dib vat posRel"><div class="blog__content__entriesList__entryPreview_imgCont posRel"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image04_.jpg" title="Мобильная версия, веб-приложение, адаптивный дизайн или десктопный формат сайта?" alt="Иллюстрация к статье: Мобильная версия, веб-приложение, адаптивный дизайн или десктопный формат сайта?"></div><h2 class="blog__content__entriesList__entryPreview__title text-left"><a href="https://lpgenerator.ru/blog/2016/02/24/mobilnaya-versiya-veb-prilozhenie-adaptivnyj-dizajn-ili-desktopnyj-format-sajta/" title="Мобильная версия, веб-приложение, адаптивный дизайн или десктопный формат сайта?" rel="bookmark">Мобильная версия, веб-приложение, адаптивный дизайн или десктопный формат сайта?</a></h2></article><article id="entry-3143" class="blog__content__entriesList__entryPreview post g_cell-4 dib vat posRel"><div class="blog__content__entriesList__entryPreview_imgCont posRel"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image06.png" title="Создание мобильной навигации независимо от гамбургер-меню" alt="Иллюстрация к статье: Создание мобильной навигации независимо от гамбургер-меню"></div><h2 class="blog__content__entriesList__entryPreview__title text-left"><a href="https://lpgenerator.ru/blog/2016/01/19/sozdanie-mobilnoj-navigacii-nezavisimo-ot-gamburger-menyu/" title="Создание мобильной навигации независимо от гамбургер-меню" rel="bookmark">Создание мобильной навигации независимо от гамбургер-меню</a></h2></article><article id="entry-3056" class="blog__content__entriesList__entryPreview post g_cell-4 dib vat posRel"><div class="blog__content__entriesList__entryPreview_imgCont posRel"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image01_.jpg" title="Как провести «бережливый» мобильный юзабилити-тест?" alt="Иллюстрация к статье: Как провести «бережливый» мобильный юзабилити-тест?"></div><h2 class="blog__content__entriesList__entryPreview__title text-left"><a href="https://lpgenerator.ru/blog/2015/12/29/kak-provesti-berezhlivyj-mobilnyj-yuzabiliti-test/" title="Как провести «бережливый» мобильный юзабилити-тест?" rel="bookmark">Как провести «бережливый» мобильный юзабилити-тест?</a></h2></article><article id="entry-2650" class="blog__content__entriesList__entryPreview post g_cell-4 dib vat posRel"><div class="blog__content__entriesList__entryPreview_imgCont posRel"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/image00_.png" title="ТОП-5 «убийц конверсии» мобильных лендингов" alt="Иллюстрация к статье: ТОП-5 «убийц конверсии» мобильных лендингов"></div><h2 class="blog__content__entriesList__entryPreview__title text-left"><a href="https://lpgenerator.ru/blog/2015/10/27/top-5-ubijc-konversii-mobilnyh-lendingov/" title="ТОП-5 «убийц конверсии» мобильных лендингов" rel="bookmark">ТОП-5 «убийц конверсии» мобильных лендингов</a></h2></article>
+			</div>
+		
+
+		
+			<div class="comment_form entry append-bottom">
+				<script>
+					var disqus_config = function () {
+						this.language = "ru";
+					};
+				</script>
+				
+				
+				
+				<div style="margin: 10px;">
+					<div id="disqus_thread"><iframe id="dsq-app799" name="dsq-app799" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 472px !important;" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/a_002.html" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0"></iframe></div>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+	var disqus_shortname = 'lpgenerator';
+	var disqus_identifier = "blog_3516";
+	var disqus_url = "https://lpgenerator.ru/blog/2016/03/16/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/";
+	var disqus_title = "Стратегия Mobile First: что это и почему на него стоит обратить внимание?";
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+				</div>
+			</div>
+		
+	</div>
+
+    
+        
+
+
+
+
+	<!--noindex-->
+		<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/blog_offer_vitamin.css" rel="stylesheet" type="text/css">
+
+<div class="blog__offer vitamin">
+    <div class="container posRel">
+        <div class="blog__offer__arts">
+            <div class="blog__offer__arts__art-girl"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/girl_figure.svg" alt=""></div>
+        </div>
+        <div class="blog__offer__content posRel">
+            <div class="blog__offer__logo"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/vitamin_logo.svg" alt="vitamin tools logo"></div>
+            <div class="title">
+                Vitamin – сервис для <b class="fYellow">выгодного</b> управления вашей рекламой
+			</div>
+            <div class="blog__offer__lists_cont clearfix">
+                <ul>
+                    <li class="yellow">Все популярные рекламные сети <b class="fYellow">в одном окне</b></li>
+                    <li class="blue">Агентское <b class="fYellow">вознаграждение до 16%</b> на личный счет или рекламу</li>
+                    <li class="magenta"><b class="fYellow">Любые</b> дополнительные услуги под ваши потребности
+					</li><li class="yellow">Бесплатное <b class="fYellow">обучение маркетингу</b></li>
+
+                </ul>
+            </div>
+            <div class="blog__offer__button_cont mt20">
+                <a href="https://vitamin.tools/?utm_source=lpgenerator_main&amp;utm_medium=banner&amp;utm_content=moreinfo" class="button large magenta" data-kiss-value="details" target="_blank">Хочу Vitamin!</a>
+            </div>
+        </div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--/noindex-->
+
+
+    
+
+	<!-- /bottom cta -->
+
+	<!-- footer -->
+	
+		
+
+
+	<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/footer_top.css" rel="stylesheet" type="text/css">
+    <div class="footerTop">
+        <div class="container">
+			<div class="footerTop__twoColumns column clearfix">
+				<div class="footerTop__linksColumn column">
+					<h4>Что почитать?</h4>
+					<ul class="bottom_nav clearfix">
+						<li class="">
+							
+								<a href="https://lpgenerator.ru/blog/">Блог</a>
+							
+						</li>
+						<li class="hidden-phone">
+							
+								<a target="_blank" href="https://lpgenerator.ru/university/">Университет LPgenerator</a>
+							
+						</li>
+						<li class=""><a target="_blank" href="https://lpgenerator.zendesk.com/hc/ru">База знаний LPgenerator</a></li>
+						<li class=""><a target="_blank" href="https://lpgenerator.ru/feedback/">LPgenerator отзывы</a></li>
+					</ul>
+				</div>
+				<div class="footerTop__linksColumn column">
+					<h4>Компания</h4>
+					<ul>
+						<li class="hidden-phone">
+							
+								<a href="https://lpgenerator.ru/privacy/">Положение об обработке персональных данных</a>
+							
+						</li>
+						<li>
+							
+								<a href="https://lpgenerator.ru/contact-us/">Контакты и поддержка</a>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footerTop__twoColumns column clearfix">
+				<div class="footerTop__linksColumn column">
+					<h4>Платформа</h4>
+					<ul>
+						<li>
+							
+								<a href="https://lpgenerator.ru/features/">Технология и функционал</a>
+							
+						</li>
+						<li class="">
+							
+								<a href="https://lpgenerator.ru/landing-page-templates/">Шаблоны лендинг пейдж</a>
+							
+						</li>
+						<li><a target="_blank" href="https://lpgenerator.ru/store/">Магазин лендинг пейдж</a></li>
+						<li class="hidden-phone"><a href="https://partners.lpgenerator.ru/">Партнерская программа</a></li>
+						<li>
+							
+								<a href="https://lpgenerator.ru/eco/">Маркетплейс</a>
+							
+						</li>
+					</ul>
+				</div>
+				<div class="footerTop__linksColumn column">
+					<h4>LPgenerator Digital</h4>
+					<ul>
+						<li>
+							<a target="_blank" href="https://verstka.lpgenerator.ru/?name=&amp;email=&amp;phone=">Верстка лендингов</a>
+						</li>
+						<li><a target="_blank" href="https://design.lpgenerator.ru/?name=&amp;email=&amp;phone=">Дизайн лендингов</a></li>
+						<li><a target="_blank" href="https://cro.lpgenerator.ru/?name=&amp;email=&amp;phone=">Оптимизация конверсии</a></li>
+					</ul>
+				</div>
+
+				
+			</div>
+
+        </div>
+    </div>
+
+
+		
+
+<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/footer_bottom.css" rel="stylesheet" type="text/css">
+<div class="footerBottom">
+    <div class="container">
+        
+			<div class="footerSocIcons__list">
+			<a class="footerSocIcons__iconItem" target="_blank" href="https://www.youtube.com/user/LandingPageGenerator"><div class="dib vam h100p"></div><i class="a_ico youtube_white_mini"></i></a><a class="footerSocIcons__iconItem" target="_blank" href="https://twitter.com/lpgenerator"><div class="dib vam h100p"></div><i class="a_ico twitter_white_mini"></i></a><a class="footerSocIcons__iconItem" target="_blank" href="https://www.facebook.com/lpgenerator"><div class="dib vam h100p"></div><i class="a_ico facebook_white_mini"></i></a><a class="footerSocIcons__iconItem" target="_blank" href="https://vk.com/lpgenerator"><div class="dib vam h100p"></div><i class="a_ico vk_white_mini"></i></a><a class="footerSocIcons__iconItem" target="_blank" href="https://instagram.com/lpgenerator"><div class="dib vam h100p"></div><i class="a_ico instagram_white_mini"></i></a><a class="footerSocIcons__iconItem" target="_blank" href="https://t.me/lpgenerator_blog"><div class="dib vam h100p"></div><i class="a_ico"><img class="db" style="width: 15px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACpklEQVRYhe3WW6iOWRgH8Pf7trZDYmjL+Up2GlzYtd3MRHLj0EZuXA03pEwupLhwyKGYpolSNHKMGxfObiiamiFSUsJI5JTTFtrGcbP95uJ71Nvb/k42242n3nrXs/7/9X/WWs961kqS7/bdOtnQEyM6W7QLFuEWPqINxztDuBEn0Yo3OIh6DEfb1xLtiT/QHLO9gjnIpzBj8OFLC8/AhVje5/gTdUWwv+HJlxAdjL14iQ84g4kZTFesQe+U7yz+/lzRPBbiRizxfaxCt3awvSIHDqA25X+G1dUKj8GJSKi3OIofS+AH4CK2oCblr43Ai3LTg/TAejwK0jXMSydUEd5w3MRy5DJ9TXhfTngKzkdCtWAH+pfAN6Ah/hvxEHOLYLfjTnsd/bEbL0L4HCaVCXRgZH9DfJPwBNNKcC7jSNa5PLL4EdahRxnhPOaH2NLw/YLH+KkM9xUWZJ1t2FmKmMKOxOk4SqORwxLcKZdY6KtgddmOQ5Fkj2MbRrZD7oa1MesFsQp5bIxlHVJB8PPwuljnUGzC3QimBccwERNwHfsxKPBdsQ//oE858dREr1YC7IWV+De25wWaMv2ncBjdKxEP3u1KtzpNGhbLXhPtTwVmK7pUOVYrZlQVQBAv4ef4XxenZXCVY9TH1tam/SUrWsqOJkny6WyvSJJkc5IkFzC5ihhmJUnSksvlWqvgFAxjcS3jG4d7cQpK1o3A/4VzVYsHOR/ltT7jr1N4cLzE+DJjNOP3zwogBtiGxal2P/yKmjgNbdhQYgIf0diRAJrEI0LhDriKlan+OZHlV9A3wx2vo08wdMdTzI6itKwdzNAoZG8wNeXfhAcdCiAGmo5dmFkCk8eeWPKd0W7GgQ4HUI0pXNP/Kdyy7zCsUwNIBTIKP3wT8Ursfx7PsgrBTossAAAAAElFTkSuQmCC"></i></a>
+			</div>
+			<div class="footerBottom__copyrightText">
+				copyright © 2011–2023
+					Все права защищены<br>Запрещено любое копирование материалов ресурса без письменного согласия владельца&nbsp;—&nbsp;ООО&nbsp;"<a href="https://lpgenerator.ru/">Феникс-Маркетинг</a>".
+
+                    ИНН:7725812838, КПП:772501001, ОГРН: 
+513774619323915280, Москва, ул. Ленинская слобода, д. 19, стр. 1, 
+этаж/пом 3/25
+			</div>
+			
+
+            <br>
+                <img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/_Visa.png" style="width: 50px; height: 18px;">
+                <img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/Mastercard-logo.svg.png" style="width: 50px; height: 18px;">
+                <img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/logo_mir.jpg" style="width: 50px; height: 18px;">
+
+            <div class="footerBottom__copyrightText">
+                <a href="https://lpgenerator.ru/payment-termsheet/">Условия оплаты картами</a>
+            </div>
+    </div>
+</div>
+
+	
+	<!-- /footer -->
+
+	<!-- ie warning dialog -->
+	
+<div id="bad_ie" class="bad_ie modal modal70 hide fade well text-center" tabindex="-1" role="dialog" aria-hidden="true">
+	<button type="button" class="close_dialog_btn" data-dismiss="modal" aria-hidden="true"></button>
+	<div class="like_h2">ВНИМАНИЕ! Вы используете устаревший браузер Internet Explorer</div>
+	<p>Данный сайт построен на передовых, современных технологиях и не поддерживает Internet Explorer 6-ой и 7-ой версии.</p>
+	<p>Настоятельно Вам рекомендуем выбрать и установить любой из современных браузеров. Это бесплатно и займет всего несколько минут.</p>
+	<table>
+		<tbody><tr>
+			<td><a target="_blank" href="https://www.google.com/chrome"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/gc.jpg" alt="Google Chrome"></a></td>
+			<td><a target="_blank" href="https://www.microsoft.com/windows/Internet-explorer/default.aspx"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/ie.jpg" alt="Internet Explorer"></a></td>
+			<td><a target="_blank" href="https://www.mozilla.com/firefox/"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/mf.jpg" alt="Mozilla Firefox"></a></td>
+			<td><a target="_blank" href="https://www.opera.com/download/"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/op.jpg" alt="Opera Browser"></a></td>
+			<td><a target="_blank" href="https://www.apple.com/safari/download/"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/as.jpg" alt="Apple Safari"></a></td>
+		</tr>
+			<tr>
+				<td><a target="_blank" href="https://www.google.com/chrome">Google Chrome</a></td>
+				<td><a target="_blank" href="https://www.microsoft.com/windows/Internet-explorer/default.aspx">Internet Explorer</a></td>
+				<td><a target="_blank" href="https://www.mozilla.com/firefox/">Mozilla Firefox</a></td>
+				<td><a target="_blank" href="https://www.opera.com/download/">Opera Browser</a></td>
+				<td><a target="_blank" href="https://www.apple.com/safari/download/">Apple Safari</a></td>
+			</tr>
+	</tbody></table>
+</div>
+
+	<!-- /ie warning dialog -->
+
+	<!-- js -->
+	
+    <script src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/jquery.min.js"></script>
+	
+
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/bootstrap.min.js"></script>
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/jquery.watermark.min.js"></script>
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/jquery.selectric.min.js"></script>
+	<link rel="stylesheet" href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/selectric.css">
+
+	<!--[if lt IE 8]>
+	<script>
+		$(function() {
+			$("#bad_ie").modal('show');
+		});
+	</script>
+	<![endif]-->
+
+	<script>
+		$('.footerTop__langs__select').selectric({
+			optionsItemBuilder: function(itemData, element, index) {
+					return itemData.value.length ? '<span class="flag f_' + itemData.value +  '"></span>' + itemData.text : itemData.text;
+			}
+		}).on('change', function(e) {
+			LPG.login.ajax('/api/v1/settings/user/language/', {language: e.target.value}, function(response) {
+				location.href = response.redirect_url;
+			}, 'PATCH');
+		});
+	</script>
+
+    
+	
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/afe135195a723aca9cca477e24a58c3f1f1c54d6.js"></script><iframe style="display: none;"></iframe>
+
+	<div id="subs_ty" class="modal hide fade rounded10">
+		<button type="button" class="close_dialog_btn" data-dismiss="modal" aria-hidden="true"></button>
+			<div class="main">
+				<div class="pull-left art"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/art_subs_ty_pp.jpg" alt=""></div>
+				<div class="pull-right txt">
+					<h2>Спасибо!</h2>
+					<h3>Пожалуйста, проверьте ваш e-mail с письмом: «LPgenerator: Пожалуйста, подтвердите подписку»</h3>
+					<p>Щелкните по ссылке, приведенной в этом письме, и подтвердите ваш адрес электронной почты.</p>
+					<p>Подтверждение подписки необходимо для подтверждения ваших намерений получать от нас письма, а также
+							для того, чтобы убедиться, что ваш адрес не был добавлен в базу злоумышленниками.</p>
+				</div>
+			</div>
+	</div>
+
+	<script id="tpl-bnr-lpgDesign" type="text/template">
+		<a class="blog__staticBanner banner__lpgDesign" href="https://design.lpgenerator.ru/?##pageUTMs##&name=&email=&phone=" target="_blank"></a>
+	</script>
+
+
+    <script id="tpl-bnr-promocodes" type="text/template">
+        <div class="blog__staticBanner banner__promocodes">
+            <div class="container posRel">
+                <div class="blog__staticBanner__arts">
+                    <div class="blog__staticBanner__arts__art-giftsSmall"><img src="//static.lpgenerator.ru/media/css/images/blog/promocodes/art_small.jpg" alt="" /></div>
+                    <div class="blog__staticBanner__arts__art-giftsMini"><img src="//static.lpgenerator.ru/media/css/images/blog/promocodes/art_mini.jpg" alt="" /></div>
+                </div>
+                <div class="blog__staticBanner__title__cont">
+                    <div class="title">Зарегистрируйтесь и&nbsp;оплатите любой тариф на&nbsp;год</div>
+                    <div class="title">
+                        <span class="fw600">Получите&nbsp;в&nbsp;подарок бонусы&nbsp;на&nbsp;9&nbsp;470&nbsp;руб.</span>
+                    </div>
+                </div>
+                <div class="blog__staticBanner__button_cont">
+                    <a href="/accounts/register/" class="button orange large" target="_blank">Зарегистрироваться</a><br>
+					
+                </div>
+                <div class="clear"></div>
+                <ul class="blog__staticBanner__promocodes__list mt10">
+                    <li class="yad"><span class="text"><span class="b960">1 500 руб.</span> на рекламу<br> в Яндекс.Директ</span></li>
+                    
+                    <li class="designer"><span class="text">Доступ к курсу<br>"Сайт за 5 дней" <s>за 7 979</s> <span class="b960">бесплатно</span></span></li>
+                </ul>
+            </div>
+        </div>
+    </script>
+
+    <script id="tpl-bnr-g_sbrf" type="text/template">
+        <link type="text/css" rel="stylesheet" class="blog_offer__style-g_sbrf" href="//static.lpgenerator.ru/media/css/page_modules/blog_offers/blog_offer_g_sbrf.css?v=11124"/>
+
+<div class="blog__offer g_sbrf inList">
+    <div class="container posRel">
+        <div class="title">
+            Бесплатная программа развития своего дела от Google и Сбербанк
+        </div>
+        <div class="subTitle">
+            для начинающих предпринимателей и собственников бизнеса
+        </div>
+        
+        <div class="blog__offer__button_cont">
+            <a href="https://www.business-class.pro/?utm_source=lpgenerator.ru&utm_medium=referral&utm_campaign=business_class_partner_banner"
+               class="button orange large"
+               onclick="_kmq.push( ['record', 'Click GoogleSber Banner' ] );"
+               target="_blank">
+                Хочу учиться
+            </a>
+        </div>
+    </div>
+</div>
+
+    </script>
+
+	
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/jquery.form.js"></script>
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/jquery.validate.ru.js"></script>
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/syntaxhighlighter.min.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = '//static.lpgenerator.ru/media/syntaxhighlighter/scripts/clipboard.swf';
+		SyntaxHighlighter.config.stripBrs = true;
+		SyntaxHighlighter.all();
+	</script>
+	<script type="text/javascript">
+		LPG.config.fixedMenu.alwaysVisible = true;
+		$(function() {
+			//$('pre code').each(function(i, e) {hljs.highlightBlock(e)});/* забыли удалить? подсветка синтаксиса и без этой строчки работает о_0 */
+			$(".subs_form .first_name").watermark('Ваше имя');
+			$(".subs_form .email").watermark('Ваш email');
+
+			if ($(".visible-desktop").css("display") == 'none') { //use only for mob
+					$("iframe, object, embed").closest("p").addClass("video-container");
+			}
+
+			var $entry = $('.blog__content__entriesList__entryFull');
+			if ( $entry.length > 0 ) {
+				var $citRetw = $entry.find('.citationRetweet');
+				if ( $citRetw.length > 0 ) {
+					var encUrl = encodeURIComponent( '//lpgenerator.ru/blog/2016/03/16/strategiya-mobile-first-chto-eto-i-pochemu-na-nego-stoit-obratit-vnimanie/' ),
+							strToRepl = '\{\{ encodedArticleUrl \}\}';
+					$citRetw.each(function(){
+						var $retwBtn = $( this ).find('.retw-button'), retwUrl = $retwBtn.attr('href');
+						$retwBtn.attr( 'href', retwUrl.replace( strToRepl, encUrl ) );
+						$retwBtn.on( 'click', function (e) {
+							e.preventDefault();
+							window.open(this.href,
+							'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+						});
+					});
+				}
+			}
+
+			var errors = "";
+			var $subs_form = $('.subs_form');
+			$subs_form.each(function() {
+				$(this).validate({
+					onfocusout: false,
+					onkeyup: false,
+					onclick: false,
+					onsubmit: false,
+					errorPlacement: function(error, element) {
+						var label = element.attr("data-error");
+						errors += label + ": " + error.html()+"\n";
+					},
+					showErrors: function(errorMap, errorList){
+						this.defaultShowErrors();
+						if (errors) {
+							alert(errors);
+						}
+						errors = "";
+					}
+				});
+			});
+
+			var loader = "<img src='//static.lpgenerator.ru/media/css/indicator.gif' title='Загрузка' alt='Загрузка' class='loader' />";
+
+			$subs_form.submit(function() {
+				var $this = $(this);
+				if ($this.valid()) {
+					$this.find(".subs_button").attr('disabled','disabled').after(loader);
+					$this.ajaxSubmit({
+						success: function(){
+							$(".loader").remove();
+							$(".subs_button").removeAttr('disabled');
+							$this.clearForm();
+							if ($(".visible-desktop").css("display") != 'none') {
+								$("#subs_ty").modal('show');
+							} else {
+								alert("Спасибо! Не забудьте подтвердить подписку.")
+							}
+							yaCounter34230430.reachGoal('forma_blog_out');
+						}
+					});
+				}
+				return false;
+			});
+
+			
+
+
+			$('.blog__content__showCatButton').on( 'click', function (e) {
+				e.preventDefault();
+				$(this).siblings('.blog__content__categoryList').toggleClass('expanded');
+			});
+
+			if( $('body').hasClass('entryFull') ) {
+				var $catList = $('.blog__content__categoryList.categoryList_all'),
+					catSelect = '<select class="blog__content__categoryList__select">',
+					$catSelect;
+
+				$catList.find('a').each(function( index ) {
+					if ( index > 0 ) {
+						catSelect += '<option value="' + $(this).attr('href') + '">' + $(this).text() + '</option>';
+					} else {
+						catSelect += '<option selected disabled>Перейти к другой категории</option>';
+					}
+				});
+				catSelect += '</select>';
+
+				$catSelect = $(catSelect);
+				$catSelect.on( 'change', function () {
+					window.location = window.location.protocol + '//' + window.location.host + $(this).val();
+				});
+				$catList.append( $catSelect );
+			}
+
+			if ( !LPG ) {
+				if ( !window.LPG ) {
+					var LPG = {};
+				} else {
+					var LPG = window.LPG;
+				}
+			}
+			LPG.blogBanners = {
+				nextBannerIndex: null,
+				bannersNames: [
+					/* список шаблонов баннеров с префиксом 'tpl-bnr-' + имя из списка, которые требуется использовать */
+					'promocodes'
+				],
+				utmMedium: LPG.utms.medium || 'main',
+				utmCampaign: LPG.utils.urlData.getValue('utm_campaign') || 'pos_blog',
+				pageUTMsGet: function () {
+					return 'ch=bl&utm_source=bl&utm_medium=' + this.utmMedium + '&utm_campaign=' + this.utmCampaign + '&utm_term=v1';
+				},
+				bannerHtmlGet: function ( name ) {
+					var elem = document.getElementById('tpl-bnr-' + name);
+					return elem !== null ? elem.innerHTML : '';
+				},
+				nextBannerIndexSet: function ( usedIndex ) {
+                    var newIndex = usedIndex;
+                    if ( this.bannersNames.length <= 1 ) {
+                        return 0;
+                    }
+                    while ( newIndex === usedIndex ) {
+                        newIndex = Math.floor( Math.random() * this.bannersNames.length );
+                    }
+					this.nextBannerIndex = newIndex;
+					return newIndex;
+				},
+                styleReplace: function ( bannerHtml, bannerName ) {
+                    var $banner = $( bannerHtml ).filter( function () {
+                        if ( this.className === ( 'blog_offer__style-' + bannerName ) ) {
+                            if ( $( '.blog_offer__style-' + bannerName ).length === 0 ) {
+                                $( 'head' ).append( this );
+                            }
+                            return false;
+                        }
+                        return true;
+                    } );
+                    return $banner;
+                },
+				bannerGet: function () {
+                    var $banner;
+                    var bannersNames = this.bannersNames;
+                    var bIndex = this.nextBannerIndex || ( Math.floor( Math.random() * bannersNames.length ) );
+                    var bannerHtml = this.bannerHtmlGet( bannersNames[ bIndex ] ).replace( /##pageUTMs##/, this.pageUTMsGet() );
+
+                    $banner = this.styleReplace( bannerHtml, bannersNames[ bIndex ] );
+					this.nextBannerIndexSet( bIndex );
+
+					return $banner;
+				}
+			};
+
+			if ( !LPG ) {
+				if ( !window.LPG ) {
+					var LPG = {};
+				} else {
+					var LPG = window.LPG;
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+		});
+
+     </script>
+    
+        <script type="text/javascript">
+            var addthis_config = {
+                "data_track_clickback":true,
+                ui_language: "ru",
+                data_ga_property: 'UA-23001717-1',
+                data_ga_social: true
+            };
+        </script>
+    
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script id="addthis-script" type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/addthis_widget.js" async="async"></script>
+
+    <script type="text/javascript">
+		if ( !LPG ) {
+			var LPG = {};
+		}
+		LPG.shareBtns = {
+			data: [
+					{ name: 'gplus', label: 'Поделиться', shareUrl: 'https://plus.google.com/share?url=', title: false, hasCounter: true },
+					{ name: 'fb', label: 'Поделиться', shareUrl: 'https://www.facebook.com/sharer/sharer.php?u=', title: false, hasCounter: true },
+					{ name: 'vk', label: 'Поделиться', shareUrl: 'https://vk.com/share.php?url=', title: '&amp;title=', hasCounter: true },
+					{ name: 'tw', label: 'Твит', shareUrl: 'https://twitter.com/intent/tweet?url=', title: '&amp;text=', hasCounter: false }
+			],
+			counters: {
+					vk: []
+			},
+			$AddThCont: $('.addthis_sharing_toolbox'),
+			addthisTimer: null,
+			timerCounts: 0,
+			is: {
+					ie: function( version ) {/* позаимствованно из is.js (//github.com/arasatasaygin/is.js) */
+							var userAgent = 'navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase() || '';
+							if ( !version ) {
+									return /msie/i.test(userAgent) || "ActiveXObject" in window;
+							}
+							if ( version >= 11 ) {
+									return "ActiveXObject" in window;
+							}
+							return new RegExp('msie ' + version).test(userAgent);
+					}
+			},
+			getCountFrom: {
+					gplus: function ( sharedUrl, $counterElem ) {
+							/* загружается jsonp, содержит _только_ строку со статистикой по переданному url */
+							/* для получения статы непосредственно с гугла требуется API_KEY */
+							$.ajax({
+									type: 'GET',
+									url: '//share.yandex.ru/gpp.xml?url=' + sharedUrl,
+									success: function ( data ) {
+											$counterElem.text( data );
+									},
+									dataType: 'jsonp'
+							});
+					},
+					fb: function ( sharedUrl, $counterElem ) {
+							/* загружается xml со статистикой по переданному url */
+							$.ajax({
+									type: 'GET',
+									url: '//api.facebook.com/restserver.php',
+									data: { method: 'links.getStats', urls: sharedUrl },
+									success: function ( data ) {
+											$counterElem.text( $(data).find('share_count').text() );
+									},
+									dataType: 'xml'
+							});
+					},
+					vk: function ( sharedUrl, $counterElem ) {
+							/* загружается скрипт, в котором вызывается метод VK.Share.count(index, shares_count); */
+							var index = this.counters.vk.push( $counterElem ) - 1,
+									url = 'https://vk.com/share.php?act=count&index=' + index + '&url=' + sharedUrl;
+							$.ajax({
+									url: url,
+									dataType: 'script',
+									success: function ( data, textStatus, jqxhr ) {}
+							});
+					}
+			},
+			getMarkup: function ( opts ) {
+					var arr = [];
+					for ( var i = 0, l = opts.data.length ; i < l ; i += 1 ) {
+							var $btn = $('<a class="dib vam share-btn uncounted ' + opts.data[i].name + '" ' +
+															'href="' + opts.data[i].shareUrl + opts.url +
+															( opts.data[i].title !== false ? opts.data[i].title + opts.title : '' ) + '" ' +
+															'target="_blank"></a>'),
+									$icon = $('<i class="icon"></i>'),
+									$label = $('<span class="share-btn-label hidden-phone">' + opts.data[i].label + '</span>'),
+									$corner = $('<i class="share-btn-counter-corner"></i>'),
+									$counter = $('<span class="share-btn-counter">0</span>');
+
+							if ( opts.data[i].hasCounter ) {
+									this.getCountFrom[opts.data[i].name].call( this, opts.url, $counter );
+							}
+							else {
+									/*$btn.addClass('uncounted');/* убирает область счётчика в кнопке */
+									$counter.html( '&nbsp;' );
+							}
+
+							$btn.append( $icon, $label, $corner, $counter );
+
+							arr.push( $btn );
+					}
+					return arr;
+			},
+			addBtns: function () {
+					var that = this,
+							counters = this.counters.vk;
+
+					if(!window.VK) {
+							window.VK = {};
+					}
+					window.VK.Share = {
+							count: function(idx, number) {
+									counters[idx].text(number);
+							}
+					};
+
+					that.$AddThCont.each(function (){
+							var $this = $( this ),
+									opts = {
+											data: that.data,
+											url: encodeURIComponent( $this.attr('addthis:url') ),
+											title: encodeURIComponent( $this.attr('addthis:title') )
+									};
+							if ( that.is.ie() && that.timerCounts >= 20 ) {/* в IE не происходит автоматического добаваления кнопок */
+									$this.append('<div class="at-share-tbx-element"></div>').find('.at-share-tbx-element').prepend( that.getMarkup( opts ) );
+									$this.find('.at-share-tbx-element').append( $this.find('.addthis_button_compact').css({ display: '' }) );
+							}
+							else {
+									$this.children('.addthis_button_compact').remove();
+									$this.find('.at-share-tbx-element').prepend( that.getMarkup( opts ) );
+							}
+					});
+					//console.log( this.timerCounts );
+				}
+			};
+
+		LPG.shareBtns.addReadyListner = function () {
+			var that = this;
+            addthis.addEventListener('addthis.ready', function () {
+				that.isATReady = true;
+                console.log('addthis.ready');
+				that.addthisTimer = setInterval(function () {
+					that.timerCounts += 1;
+                    if ( that.$AddThCont.find('.at-share-tbx-element').length > 0 || ( that.is.ie() && that.timerCounts >= 20 ) ) {
+						that.addBtns();
+                        console.log('addBtns called');
+                        clearInterval(that.addthisTimer);
+                    }
+                }, 100);
+            });
+        };
+
+        if ( LPG.shareBtns.$AddThCont.find('.at-share-tbx-element').length > 0 ) {
+            LPG.shareBtns.addBtns();
+            console.log('addBtns called');
+            clearInterval(LPG.shareBtns.addthisTimer);
+        }
+        else if ( !window.addthis ) {
+            $('#addthis-script').on( 'load', function () {
+                LPG.shareBtns.addReadyListner();
+            });
+        }
+        else {
+            LPG.shareBtns.addReadyListner();
+        }
+    </script>
+
+	
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJR4D5');</script>
+<!-- End Google Tag Manager -->
+
+
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJR4D5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+	<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/lightbox.min.js"></script><div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div>
+    <script>/* .blog__content__entriesList__entryFull__toCommentsBlock */
+		$( function () {
+			$( '.blog__content__entriesList__entryFull__toCommentsBlock' ).on( 'click', '.button', function ( e ) {
+				e.preventDefault();
+				$( 'html:not(:animated), body:not(:animated)' ).animate( {
+					scrollTop: ( $( '#disqus_thread' ).offset().top - document.querySelector( '.fixedMenu' ).offsetHeight )
+				}, 300 );
+			});
+		} );
+    </script>
+
+
+    <!-- slon push block -->
+    
+        <script>
+            window.gdeslon_q.push({
+                page_type:   "other",
+                merchant_id: "9412",
+                order_id:    "",
+                category_id: "",
+                products: [],
+                deduplication: ""
+            });
+        </script>
+    
+    <!-- /slon push block -->
+
+	<!-- fixed menu-->
+	
+			
+
+
+<!-- fixed menu [start] -->
+<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/fixed_menu.css" rel="stylesheet" type="text/css">
+<div class="fixedMenu">
+	<div class="container">
+		<a href="https://lpgenerator.ru/" class="logo"><img src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/lpg_vitamin_yagla_logo_white.svg" alt="LPgenerator logo, landing page генератор"></a><div class="buttons"><button type="button" class="mobile_nav_btn btn-navbar vam"><span class="hamburger"></span></button><div class="dib vam" style="line-height: 32px;"><a class="link gray" href="https://lpgenerator.ru/accounts/login/" title="Войти">Вход</a></div><a class="button orange vam lc" href="https://lpgenerator.ru/accounts/register/" data-toggle="modal" data-target="#login_dialog"><span>Создать лендинг</span></a></div><div class="menu"><ul><li><a href="https://lpgenerator.ru/features/">Возможности</a></li><li><a href="https://lpgenerator.ru/landing-page-templates/">Шаблоны LP</a></li><li><a href="https://lpgenerator.ru/pricing/">Цены</a></li><li><span>Блог</span></li><li><a href="https://lpgenerator.ru/contact-us/">Нужна помощь?</a></li></ul></div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function() {
+		var isVisible = LPG.config.fixedMenu.alwaysVisible/* /\/blog|pricing\//.test(window.location.pathname)*/,
+			$fixedMenu = $('.fixedMenu'),
+			$navbarInner = $('.navbar-inner');
+
+		if ( !isVisible && $navbarInner.length > 0 ) {
+			function checkAndSetPos() {
+				var containerTop = $navbarInner.offset().top + $navbarInner.height();
+				if ( $(window).scrollTop() > containerTop ) {
+					$fixedMenu.slideDown(200);
+				}
+				if ( $(window).scrollTop() < containerTop ) {
+					$fixedMenu.slideUp(200);
+				}
+			}
+			checkAndSetPos();
+			$(window).scroll(function() {
+				if ( ( window.innerWidth || document.documentElement.clientWidth ) >= 768 ) {
+					checkAndSetPos();
+				}
+			});
+			$(window).resize(function() {
+				if ( ( window.innerWidth || document.documentElement.clientWidth ) >= 768 ) {
+					checkAndSetPos();
+				}
+			});
+		} else if ( isVisible ) {
+			$fixedMenu.css('display', '');
+		}
+
+		$fixedMenu.on( 'click', '.mobile_nav_btn', function (e) {
+			e.preventDefault();
+			$fixedMenu.find('.menu').toggleClass('expanded');
+		})
+	});
+</script>
+<!-- fixed menu [end] -->
+
+	
+	<!-- /fixed menu-->
+
+	<!-- login dialog -->
+	
+		
+			
+
+<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/mobile-detect.min.js"></script>
+<link href="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/login_dialog.css" rel="stylesheet" type="text/css">
+
+<div id="login_dialog" class="login_dialog modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="login_dialog__titlebar"><div class="login_progress"><div class="line" style="width: 0%;"></div></div></div>
+
+	<button type="button" class="close_dialog_btn" data-dismiss="modal" aria-hidden="true"></button>
+	<div class="dialog_inner">
+		<div class="authForm" id="authForm"></div>
+	</div>
+</div>
+
+
+<script language="template" id="tpl_authForm_check">
+	<div>
+		<h3>Войдите или зарегистрируйтесь, чтобы создавать лендинги или управлять ими</h3>
+		<form class="form clearfix">
+			<div id="authForm_error" class="hidden"></div>
+			<input class="mt20" type="text" value="" placeholder="Введите email" id="authForm_email" onkeypress="LPG.login.ifEnterPress(arguments[0], 'check', this);">
+			<button class="button" onclick="LPG.login.check(this); return false;">Далее</button>
+			<span class="link" onclick="LPG.login.passwordRestore();">Восстановить<br>пароль</span>
+		</form>
+
+		<div class="social_auth_wrapper {@ enableSocialLogin @}">
+			<h4>Вход или регистрация через социальные сети:</h4>
+			<a class="social_icon_small tw vam {@ enableSocialTwitter @}" href="/accounts/social_start_reg/twitter/"></a>
+			<a class="social_icon_small fb vam" href="/accounts/social_start_reg/facebook/"></a>
+			<a class="social_icon_small gp vam" href="/accounts/social_start_reg/google-oauth2/"></a>
+			<a class="social_icon_small ya vam" href="/accounts/social_start_reg/yandex-oauth2/"></a>
+			<a class="social_icon_small vk vam {@ enableSocialVk @}" href="/accounts/social_start_reg/vk-oauth2/"></a>
+			
+		</div>
+	</div>
+</script>
+
+
+<script language="template" id="tpl_authForm_auth">
+	<h3><span>Введите пароль для аккаунта</span>&nbsp;<span id="cnt_authForm_email"></span></h3>
+	<form class="form clearfix">
+		<div id="authForm_error" class="hidden"></div>
+		<input class="mt20" type="password" value="" placeholder="Введите пароль" id="authForm_password" onkeypress="LPG.login.ifEnterPress(arguments[0], 'auth', this);">
+		<button class="button" onclick="LPG.login.auth(this); return false;">Войти</button>
+		<span class="link" onclick="LPG.login.passwordRestore();">Восстановить пароль</span>
+	</form>
+
+	<div class="social_auth_wrapper {@ enableSocialLogin @}">
+		<h4>Вход или регистрация через социальные сети:</h4>
+		<a class="social_icon_small tw vam {@ enableSocialTwitter @}" href="/accounts/social_start_reg/twitter/"></a>
+		<a class="social_icon_small fb vam" href="/accounts/social_start_reg/facebook/"></a>
+		<a class="social_icon_small gp vam" href="/accounts/social_start_reg/google-oauth2/"></a>
+		<a class="social_icon_small ya vam" href="/accounts/social_start_reg/yandex-oauth2/"></a>
+		<a class="social_icon_small vk vam {@ enableSocialVk @}" href="/accounts/social_start_reg/vk-oauth2/"></a>
+	</div>
+</script>
+
+
+<script language="template" id="tpl_authForm_register">
+	<h3><span>Чтобы зарегистрироваться, введите пароль для входа в аккаунт</span>&nbsp;<span id="cnt_authForm_email"></span></h3>
+	<form class="form clearfix">
+		<div id="authForm_error" class="hidden"></div>
+		<div class="{@ requireName @}">
+			<input class="mt20" type="text" value="" placeholder="Имя" id="authForm_name" onkeypress="">
+			<input class="mt20" type="text" value="" placeholder="Номер телефона" id="authForm_phone" onkeypress="">
+		</div>
+		<input class="mt20" type="password" value="" placeholder="Введите пароль" id="authForm_password" onkeypress="LPG.login.ifEnterPress(arguments[0], 'register', this);">
+		<label><input type="checkbox" id="authForm__termsOfUse_checkbox" name="terms" {@ termsCheckedAttr @}> Я принимаю <a href="/terms/" target="_blank">Правила пользования Сервисом</a></label>
+		<label><input type="checkbox" id="authForm__privacyPolicy_checkbox" name="privacy" {@ privacyCheckedAttr @}> Я принимаю <a href="/oferta/v1/" target="_blank">Договор-оферту</a></label>
+		<button class="button authForm__submitBtn" onclick="LPG.login.register(this); return false;" disabled>Зарегистрироваться</button>
+		<span class="link" onclick="LPG.login.init();">Указать<br>другой email</span>
+	</form>
+
+	<div class="social_auth_wrapper {@ enableSocialLogin @}">
+		<h4>Зарегистрируйтесь через социальные сети:</h4>
+		<a class="social_icon_small tw vam {@ enableSocialTwitter @}" href="/accounts/social_start_reg/twitter/"></a>
+		<a class="social_icon_small fb vam" href="/accounts/social_start_reg/facebook/"></a>
+		<a class="social_icon_small gp vam" href="/accounts/social_start_reg/google-oauth2/"></a>
+		<a class="social_icon_small ya vam" href="/accounts/social_start_reg/yandex-oauth2/"></a>
+		<a class="social_icon_small vk vam {@ enableSocialVk @}" href="/accounts/social_start_reg/vk-oauth2/"></a>
+	</div>
+</script>
+
+
+<script language="template" id="tpl_authForm_passwordRestore">
+	<h3>Укажите Email для входа.<br>На него мы отправим инструкции для восстановления пароля</h3>
+	<form class="form clearfix">
+		<div id="authForm_error" class="hidden"></div>
+		<input class="mt20" type="text" value="" placeholder="Введите email" id="authForm_email" onkeypress="LPG.login.ifEnterPress(arguments[0], 'passwordReset', this);">
+		<button class="button" onclick="LPG.login.passwordReset(); return false;">Восстановить пароль</button>
+	</form>
+</script>
+
+
+<script language="template" id="tpl_authForm_passwordRestoreProcess">
+	<h3>На указанный Email была отправлена инструкция для сброса пароля</h3>
+</script>
+
+
+<script language="template" id="tpl_authForm_requireEmailConfirmation">
+	<h3>На указанный Email была отправлена ссылка для активации личного кабинета</h3>
+</script>
+
+
+<script>
+	if (!window.LT) {
+		window.LT = {};
+	}
+	LT['Check'] = "Проверка";
+	LT['Auth'] = "Авторизация";
+	LT['Register'] = "Регистрация";
+
+	if (!window.loginConfig) {
+		window.loginConfig = {};
+	}
+
+	if (!LPG.REG_LANG) {
+		LPG.REG_LANG = 'ru';
+	}
+	/**Временно отключаем всем твиттер*/
+	loginConfig.enableSocialTwitter = false;
+	/**Полякам отключаем вконтакт*/
+	if (LPG.REG_LANG === 'pl') {
+		loginConfig.enableSocialVk = false;
+	}
+</script>
+
+
+<script src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/masks.js"></script>
+<script>
+	MASK.setDomain('//static.lpgenerator.ru/media/');
+</script>
+<script type="text/javascript" src="%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20Mobile%20First%20%D1%87%D1%82%D0%BE%20%D1%8D%D1%82%D0%BE%20%D0%B8%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BD%D0%B0%20%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%B8%D1%82%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5%20_files/login.js"></script>
+
+		
+	
+	<!-- /login dialog -->
+
+	<!-- cookie dialog -->
+	
+	<!-- /cookie dialog -->
+
+
+
+
+</body></html>

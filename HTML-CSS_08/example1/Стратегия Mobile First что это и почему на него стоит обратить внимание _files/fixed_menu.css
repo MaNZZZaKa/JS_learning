@@ -1,0 +1,200 @@
+/* Fixed Menu [start] */
+.topSpacer {
+	height: 81px;
+	background-color: #202943;
+}
+
+
+.fixedMenu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 320px;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	background: #22252d;
+	padding: 24px 0 8px;
+	z-index: 200;
+}
+.fixedMenu img {/* from Bootstrap for adaptivity */
+	max-width: 100%;
+	width: auto\9;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+.fixedMenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.fixedMenu .menu li {
+	display: inline-block;
+	vertical-align: middle;
+}
+.fixedMenu .logo {
+	float: left;
+	width: 184px;
+	margin: -6px 6px 0 0;
+}
+.fixedMenu .cont {
+	margin-left: 200px;
+	text-align: right;
+}
+.fixedMenu .menu {
+	float: right;
+}
+.respOn .fixedMenu .menu {
+	display: none;
+}
+.fixedMenu .menu.expanded {
+	display: block;
+}
+.fixedMenu .menu li {
+	font-size: 14px;
+	line-height: 32px;
+	padding: 0 8px;
+}
+.fixedMenu .menu a,
+.fixedMenu .menu span,
+.link.gray {
+	color: #fff;
+}
+.fixedMenu .menu a,
+.link.gray {
+	opacity: .6;
+	text-decoration: none;
+}
+.fixedMenu .menu a:hover,
+.link.gray:hover {
+	opacity: .9;
+	border-bottom: 2px solid #f98500;
+}
+.fixedMenu .buttons {
+	float: right;
+	text-align: left;
+}
+.fixedMenu .buttons > * {
+	margin: 0 8px;
+}
+.fixedMenu .buttons > *:last-child {
+	margin-right: 0;
+}
+.fixedMenu .buttons .link {
+	opacity: 1;
+}
+.fixedMenu .mobile_nav_btn {
+	float: none;
+	display: none;
+	width: 32px;
+	height: 32px;
+	background: transparent;
+	padding: 9px 8px;
+	border: 2px solid #65676c;
+	border-radius: 6px;
+	margin: 0 5px 0 0;
+	box-sizing: border-box;
+}
+.respOn .fixedMenu .mobile_nav_btn {
+	display: inline-block;
+}
+.fixedMenu .mobile_nav_btn .hamburger {
+	display: inline-block;
+	width: 12px;
+	height: 2px;
+	padding: 2px 0;
+	border-top: 2px solid #65676c;
+	border-bottom: 2px solid #65676c;
+	vertical-align: top;
+}
+.fixedMenu .mobile_nav_btn .hamburger:before {
+	display: block;
+	height: 2px;
+	background-color: #65676c;
+	content: '';
+}
+.fixedMenu .button.orange {
+	background-color: #f98500;
+}
+.fixedMenu .button.orange:hover {
+	background-color: #ec7f00;
+}
+.fixedMenu .button.gray {
+	background-color: #95b0bc;
+}
+.fixedMenu .button.gray:hover {
+	background-color: #5e808f;
+}
+.fixedMenu .button,
+.fixedMenu .buttons__login,
+.fixedMenu .buttons__logout {
+	line-height: 32px;
+}
+.fixedMenu .button.reg {
+	min-width: 135px;
+	text-transform: uppercase;
+}
+.fixedMenu .buttons__login,
+.fixedMenu .buttons__logout {
+	opacity: .3;
+}
+.fixedMenu .buttons__login:hover,
+.fixedMenu .buttons__logout:hover {
+	opacity: .9;
+}
+.site-ru .fixedMenu .button.lc {
+	width: 170px;
+}
+.site-pl .fixedMenu .button.lc {
+	padding: 0 10px;
+}
+.fixedMenu .button.lc {
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none!important;
+	border-radius: 6px;
+}
+.respOn .fixedMenu .button.lc {
+	display: none;
+}
+.fixedMenu .button.logout .icon {
+	margin-right: -4px;
+}
+.fixedMenu .icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(https://static.lpgenerator.ru/media/css/images/icons/icon_exit_white_mini.png) !important;
+	background-repeat: no-repeat;
+}
+.fixedMenu .icon + span {
+	margin-left: 3px;
+	vertical-align: middle;
+}
+.fixedMenu .logout .icon {
+	background-position: 0 0;
+}
+
+
+@media only screen and (min-width: 768px){
+	.respOn .fixedMenu .button.lc {
+		display: inline-block;
+	}
+}
+
+
+@media only screen and (min-width: 960px){
+	.respOn .fixedMenu .menu {
+		display: block;
+	}
+	.respOn .fixedMenu .mobile_nav_btn {
+		display: none;
+	}
+}
+/* Fixed Menu [end] */

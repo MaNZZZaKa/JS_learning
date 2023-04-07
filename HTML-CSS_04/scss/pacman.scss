@@ -1,0 +1,10 @@
+.path {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #333;
+    padding: 20px;
+    // нижній метод бо нам потрібна фіксована висота в 100px
+    box-sizing: border-box; 
+    overflow: hidden;
+}

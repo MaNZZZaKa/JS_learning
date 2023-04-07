@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/docum_page.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <title>CSS</title>
+</head>
+<body>
+<!-- 
+    <footer>
+        <h1></h1>
+    </footer> -->
+
+    <!-- wrapper -->
+    <main class="main-container">
+        <!-- navigation of chapters -->
+        <nav class="navigation-container">
+            <h2 class="h4">CSS Documentation</h2>
+            <!-- <h2 class="h4">Documentation</h2> -->
+            <!-- navigation links container created to push down main navigation links among preview
+            and stretch to all display -->
+            <div class="navigation-links-container">   
+                <hr>
+                <div class="navigation-links">
+                    <a href="#label-intro" class="h6">Introduction</a>
+                </div>
+                <hr>
+                <div class="navigation-links">
+                    <a href="#label-syntax" class="h6">Syntax</a>
+                </div>
+                <hr>
+                <div class="navigation-links">
+                    <a href="#label-selectors" class="h6">Selectors</a>
+                </div>
+                <hr>
+                <div class="navigation-links">
+                    <a href="#label-how-to" class="h6">How To Add CSS</a>
+                </div>
+                <hr>
+                <div class="navigation-links">
+                    <a href="#label-comments" class="h6">CSS Comments</a>
+                </div>
+            </div>    
+        </nav>
+
+        <!-- main article -->
+        <section class="article-container">
+            <!-- CSS Introduction -->
+            <article>
+                <h2 id="label-intro">CSS Introduction</h2>
+
+                <hr>CSS is the language we use to style a Web page.<hr>
+
+                <p>
+                    <h5>What is CSS?</h5>
+                    <ol>
+                        <li>CSS stands for Cascading Style Sheets</li>
+                        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                        <li>External stylesheets are stored in CSS files</li>
+                    </ol>
+                </p>
+                <br><br>
+                <p>
+                    <h5>Why Use CSS?</h5>
+                    CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+                    <div class="example-container">
+                        CSS Example
+                        <textarea class="few-row-code" rows="14" disabled>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}                              
+                        </textarea>
+                    </div>
+                </p>
+                <br><br>
+                <p>
+                    <h5>CSS Solved a Big Problem</h5>
+                    HTML was NEVER intended to contain tags for formatting a web page!
+                    <br>
+                    HTML was created to describe the content of a web page, like:
+
+                    <div class="one-row-code">
+                        &lth1&gtThis is a heading&lt/h1&gt
+                    </div>
+
+                    <div class="one-row-code">
+                        &ltp&gtThis is a paragraph.&lt/p&gt
+                    </div>                    
+                    When tags like <span class='html-to-text'>&ltfont&gt</span> and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+                    To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+                    CSS removed the style formatting from the HTML page!
+                </p>
+                <br><br>
+                <p>
+                    <h5>CSS Saves a Lot of Work!</h5>
+                    The style definitions are normally saved in external .css files.
+                    With an external stylesheet file, you can change the look of an entire website by changing just one file!
+
+                </p>
+
+            </article>
+            <br><br><br><br><br>
+
+            <!-- CSS Syntax -->
+            <article>
+                <h2 id="label-syntax">CSS Syntax</h2>
+
+                <hr>A CSS rule consists of a selector and a declaration block.<hr>
+                <br><br>
+                <p>
+                    <h5>CSS Syntax</h5>
+                    <img src="./img/1_CSS_SYNTAX_img_selector.gif" alt="Sorry, the server is currently unavailable">
+                    <br>
+                    The selector points to the HTML element you want to style.
+                    The declaration block contains one or more declarations separated by semicolons.
+                    Each declaration includes a CSS property name and a value, separated by a colon.
+                    Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+                    <div class="example-container">
+                        Example
+                        <textarea class="few-row-code" rows="5" disabled>
+p {
+    color: red;
+    text-align: center;
+}                                                        
+                        </textarea>
+                    </div>
+                </p>
+                <br><br>
+                <p>                
+                <h6>Example Explained</h6>
+                <ul>
+                    <li><span>p</span> is a selector in CSS (it points to the HTML element you want to style: <span class='html-to-text'>&ltp&gt</span>).</li>
+                    <li><span>color </span>is a property, and <span>red</span> is the property value</li>
+                    <li><span>text-align </span>is a property, and <span>center</span> is the property value</li>
+                </ul>
+            </article>
+            <br><br><br><br><br>
+
+            <!-- CSS Selectors -->
+            <article>
+                <h2 id="label-selectors">CSS Selectors</h2>
+                
+                <hr>A CSS selector selects the HTML element(s) you want to style.
+                <hr>
+                
+                <p>
+                    <h5>CSS Selectors</h5>
+                    CSS selectors are used to "find" (or select) the HTML elements you want to style.
+                    We can divide CSS selectors into five categories:
+                    <ul>
+                        <li>Simple selectors (select elements based on name, id, class)</li>
+                        <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+                        <li>Pseudo-class selectors (select elements based on a certain state)</li>
+                        <li>Pseudo-elements selectors (select and style a part of an element)</li>
+                        <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+                    </ul>
+                    This page will explain the most basic CSS selectors.
+                </p>
+                
+                <br><br>
+                <p>
+                    <h5>The CSS element Selector</h5>
+                    The element selector selects HTML elements based on the element name.
+                    <div class="example-container">
+                        Example<br>
+                        Here, all &ltp&gt elements on the page will be center-aligned, with a red text color:
+                        <textarea class="few-row-code" rows="5" disabled>
+p {
+    text-align: center;
+    color: red;
+}                                                      
+                        </textarea>
+                    </div>
+                </p>
+                
+                <br><br>
+                <p>
+                    <h5>The CSS id Selector</h5>
+                    The id selector uses the id attribute of an HTML element to select a specific element.
+                    The id of an element is unique within a page, so the id selector is used to select one unique element!
+                    To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+                    <div class="example-container">
+                        Example<br>
+                        The CSS rule below will be applied to the HTML element with id="para1":
+                        <textarea class="few-row-code" rows="5" disabled>
+#para1 {
+    text-align: center;
+    color: red;
+}                                                      
+                        </textarea>
+                    </div>
+                </p>
+
+                <br><br>
+                <p>
+                    <h5>The CSS class Selector</h5>
+                    The class selector selects HTML elements with a specific class attribute.
+                    To select elements with a specific class, write a period (.) character, followed by the class name.
+
+                    <div class="example-container">
+                        Example<br>
+                        In this example all HTML elements with class="center" will be red and center-aligned: 
+                        <textarea class="few-row-code" rows="5" disabled>
+.center {
+  text-align: center;
+  color: red;
+}                                                      
+                        </textarea>
+                    </div>
+
+                    You can also specify that only specific HTML elements should be affected by a class.
+                
+                    <div class="example-container">
+                        Example<br>
+                        In this example the &ltp&gt element will be styled according to class="center" and to class="large": 
+                        <textarea class="few-row-code" rows="2" disabled>
+<p class="center large">This paragraph refers to two classes.</p>                                                     
+                        </textarea>
+                    </div>
+                </p>
+
+                <br><br>
+                <p>
+                    <h5>The CSS Universal Selector</h5>
+                    The universal selector (*) selects all HTML elements on the page.
+
+                    <div class="example-container">
+                        Example<br>
+                        The CSS rule below will affect every HTML element on the page:  
+                        <textarea class="few-row-code" rows="5" disabled>
+* {
+  text-align: center;
+  color: red;
+}                                                      
+                        </textarea>
+                    </div>
+                </p>
+
+                <br><br>
+                <p>
+                    <h5>The CSS Grouping Selector</h5>
+                    The grouping selector selects all the HTML elements with the same style definitions.
+                    Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+
+                    <div class="example-container">
+                        <textarea class="few-row-code" rows="15" disabled>
+h1 {
+  text-align: center;
+  color: red;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+p {
+  text-align: center;
+  color: red;
+}                               
+                        </textarea>
+                    </div>
+                    It will be better to group the selectors, to minimize the code.
+                    To group selectors, separate each selector with a comma.
+                
+                    <div class="example-container">
+                        Example<br>
+                        In this example we have grouped the selectors from
+                        the code above: 
+                        <textarea class="few-row-code" rows="5" disabled>
+h1, h2, p {
+  text-align: center;
+  color: red;
+}                               
+                        </textarea>
+                    </div>
+                </p>
+            </article>
+            <br><br><br><br><br>
+
+            <!--How To Add CSS  -->
+            <article>
+                <h2 id="label-how-to">How To Add CSS</h2>
+                <hr>How To Add CSS<hr>
+
+                <p>
+                    <h5>Three Ways to Insert CSS</h5>
+
+                    There are three ways of inserting a style sheet:
+                    <ul>
+                        <li>External CSS</li>
+                        <li>Internal CSS</li>
+                        <li>Inline CSS</li>
+                    </ul>
+                </p>
+
+                <br><br>
+                <p>
+                    <h5>External CSS</h5>
+                    With an external style sheet, you can change the look of an entire website by changing just one file!
+                    Each HTML page must include a reference to the external style sheet file inside the <link> element, inside the head section.
+                    <br>
+                    An external style sheet can be written in any text editor, and must be saved with a .css extension.
+                    The external .css file should not contain any HTML tags.
+                    Here is how the "mystyle.css" file looks:
+
+                    <div class="example-container">
+                        "mystyle.css"
+                        <textarea class="few-row-code" rows="9" disabled>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}                             
+                        </textarea>
+                    </div>
+
+                    <div class="message-warning">
+                        Note: Do not add a space between the property value and the unit:
+                        <ul>
+                            <li>Incorrect (space): <span> margin-left: 20 px;</span></li>
+                            <li>Correct (nospace): <span>margin-left: 20px;</span></li>
+                        </ul>                   
+                    </div>
+                </p>
+
+                <br><br>
+                <p>
+                    <h5>Internal CSS</h5>
+                    An internal style sheet may be used if one single HTML page has a unique style.
+                    The internal style is defined inside the <span class="html-to-text">&ltstyle&gt</span> element, inside the head section.
+
+                    <div class="example-container">
+                        Example<br>
+                        Internal styles are defined within the &ltstyle&gt element, inside the &lthead&gt section of an HTML page:
+                        <textarea class="few-row-code" rows="14" disabled>
+<head>
+    <style>
+    body {
+        background-color: linen;
+    }
+    h1 {
+        color: maroon;
+        margin-left: 40px;
+    } 
+    </style>
+</head>
+<body>....
+</body>        
+                        </textarea>
+                    </div>
+                </p>
+
+                <br><br>
+                <p>
+                    <h5>Inline CSS</h5>
+                    An inline style may be used to apply a unique style for a single element.
+                    To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.
+
+
+                    <div class="example-container">
+                        Example<br>
+                        Inline styles are defined within the "style" attribute of the relevant element:
+
+                        <textarea class="few-row-code" rows="5" disabled>
+<body>
+    <h1 style="color:blue;text-align:center;">This is a heading</h1>
+    <p style="color:red;">This is a paragraph.</p>    
+</body>         
+                        </textarea>
+                    </div>
+                </p>
+
+                <div class="message-notice">
+                    Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.
+                </div>
+
+                <br><br>
+                <p>
+                    <h5>Multiple Style Sheets</h5>
+                    If some properties have been defined for the same selector (element) 
+                    in different style sheets, the value from the last read style sheet will be used. 
+
+
+                    <div class="example-container">                        
+                        <textarea class="few-row-code" rows="4" disabled>
+h1 {
+  color: navy;
+}          
+                        </textarea>
+                    </div>
+
+                    <br>
+                    Then, assume that an internal style sheet also has the following style for the &lth1&gt element:
+                    <div class="example-container">                        
+                        <textarea class="few-row-code" rows="4" disabled>
+h1 {
+  color: navy;
+}          
+                        </textarea>
+                    </div>
+                    
+                    <br>
+                    <div class="example-container">
+                        Example<br>
+                        If the internal style is defined after the link to the external style sheet, 
+                        the &lth1&gt elements will be "orange":
+                        
+                        <textarea class="few-row-code" rows="9" disabled>
+<head>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <style>
+    h1 {
+        color: orange;
+    }
+    </style>
+</head> 
+                        </textarea>
+                    </div>
+                </p>
+
+                <br><br>
+                <p>
+                    <h5>Cascading Order</h5>
+                    What style will be used when there is more than one style specified for an HTML element?
+                    All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
+                    <ol>
+                        <li>Inline style (inside an HTML element)</li>
+                        <li>External and internal style sheets (in the head section)</li>
+                        <li>Browser default</li>
+                    </ol>
+                    So, an inline style has the highest priority, and will override external and internal styles and browser defaults.
+                </p>
+            </article>
+            <br><br><br><br><br>
+
+            <!-- CSS Comments -->
+            <article>
+                <h2 id="label-comments">CSS Comments</h2>
+                <hr>CSS comments are not displayed in the browser,
+                but they can help document your source code. <hr>
+
+                <p>
+                    <h5>CSS Comments</h5>
+                    Comments are used to explain the code, and may help when you edit the source code at a later date.
+                    Comments are ignored by browsers.
+                    A CSS comment is placed inside the <span>&ltstyle&gt</span> element,
+                    and starts with <span>/*</span> and ends with <span>*/</span>:
+                    <div class="example-container">
+                        Example        
+                      
+                        <textarea class="few-row-code" rows="5" disabled>
+/* This is a single-line comment */
+p {
+  color: red;
+}         
+                        </textarea>
+                    </div>
+
+                    <br>You can add comments wherever you want in the code:
+                    <div class="example-container">
+                        Example
+                      
+                        <textarea class="few-row-code" rows="4" disabled>
+p {
+  color: red; /* Set text color to red */
+}         
+                        </textarea>
+                    </div>
+
+                    <br>Comments can also span multiple lines: 
+                    <div class="example-container">
+                        Example
+                      
+                        <textarea class="few-row-code" rows="7" disabled>
+/* This is
+a multi-line
+comment */ 
+p {
+  color: red;
+}         
+                        </textarea>
+                    </div>
+
+
+                </p>
+
+                <br><br>
+                <p>
+                    <h5>HTML and CSS Comments</h5>
+                    From the HTML tutorial, you learned that you can add comments to your HTML source by using the &lt!--...--&gt syntax.
+                    <br>In the following example, we use a combination of HTML and CSS comments:
+                    <div class="example-container">
+                        Example         
+                        <textarea class="few-row-code" rows="21" disabled>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p {
+            color: red; /* Set text color to red */
+        } 
+    </style>
+</head>
+<body>
+
+    <h2>My Heading</h2>
+
+    <!-- These paragraphs will be red -->
+    <p>Hello World!</p>
+    <p>This paragraph is styled with CSS.</p>
+    <p>CSS comments are not shown in the output.</p>
+
+</body>
+</html>     
+                        </textarea>
+                    </div>
+                </p>
+            </article>
+
+
+        </section>
+        
+    </main>
+
+
+    <footer>
+
+    </footer>
+</body>
+</html>
