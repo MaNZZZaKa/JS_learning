@@ -1,0 +1,1 @@
+Create a Todo list similar to the design, which must be stored in localStorage with an expiration time (6h).

@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.main-container .todo-list-container {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  min-width: 500px;
+  min-height: 400px;
+  background: linear-gradient(to right, rgba(115, 115, 243, 0.9), pink);
+}
+.main-container .todo-list-container .clear-button-container {
+  width: 100%;
+}
+.main-container .todo-list-container .clear-button-container .clear-button {
+  width: 100%;
+}
+.main-container .todo-list-container .clear-button-container .clear-button:active {
+  color: white;
+  background-color: gray;
+  opacity: 0.8;
+}
+
+.todo-list {
+  width: 100%;
+  padding-left: 0px;
+}
+.todo-list > li {
+  list-style: none;
+}
+.todo-list-item {
+  display: flex;
+  padding: 10px 0 10px 0;
+}
+.todo-list-item.done {
+  background-color: lightgreen;
+  text-decoration: line-through;
+}
+.todo-list-item.expired {
+  background-color: lightcoral;
+  text-decoration: line-through;
+}
+.todo-list-item-text {
+  text-transform: capitalize;
+}
+.todo-list-item-actions {
+  margin-left: auto;
+}
+
+.add-edit-button:hover {
+  background-color: grey;
+  color: white;
+}
+
+.add-edit-button {
+  border-left: none;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+}
+
+.add-edit-input {
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid grey;
+}/*# sourceMappingURL=index.css.map */
