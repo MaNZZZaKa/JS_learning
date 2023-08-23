@@ -1,0 +1,79 @@
+<div class="wrapper">
+  <div class="details-container" *ngIf="product[0]">
+    <div class="product-img">
+      <img
+        class="product-img"
+        src="{{ product[0].imgUrl }}"
+        alt="{{ product[0].name }}"
+      />
+      <div class="product-color-available">
+        <div
+          *ngFor="let color of product[0].color; let x = index"
+          style="height: max-content"
+        >
+          <span
+            class="{{ color | lowercase }}-bg details-color-container"
+            [ngClass]="{
+              'margin-right-1': x + 1 < product[0].color.length
+            }"
+            >{{ color }}</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="product-details">
+      <h2 class="product-details-name">{{ product[0].name }}</h2>
+      <div class="product-details-discr padding-top">
+        {{ product[0].description }}
+      </div>
+      <div class="flex-column padding-top">
+        <span class="discounted-price">{{
+          calcDiscountPrice(product[0].price, product[0].discount)
+            | currency : "EUR"
+        }}</span>
+        <s class="old-price">{{ product[0].price | currency : "EUR" }}</s>
+      </div>
+
+      <mat-form-field class="flex-column padding-top">
+        <mat-label>Color</mat-label>
+        <mat-select [formControl]="colors" multiple>
+          <mat-option *ngFor="let color of colorsList" [value]="color">{{
+            color | titlecase
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="flex-column padding-top">
+        <mat-label>Size</mat-label>
+        <mat-select [formControl]="sizes" multiple>
+          <mat-option *ngFor="let size of sizesList" [value]="size">{{
+            size
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="padding-top"><b>Availability:</b> Please select options</div>
+      <div class="flex-column padding-top">
+        <label for="quantity-select"><b>Quantity</b></label>
+        <input
+          type="text"
+          value="1"
+          id="quantity-select"
+          class="quantity-select"
+        />
+      </div>
+      <div class="product-details-add-cart cart-wish-size-buttons">
+        <button mat-button class="add-cart-button cart-wish-size-buttons">
+          <mat-icon>add_shopping_cart</mat-icon> Add to cart
+        </button>
+      </div>
+      <div class="product-details-add-wish-list cart-wish-size-buttons">
+        <button mat-button class="add-wish-list-button cart-wish-size-buttons">
+          <mat-icon>accessible</mat-icon> Add to Wish List
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="details-container" *ngIf="!product[0]">
+    Sorry, this product currently unavailable.
+  </div>
+</div>

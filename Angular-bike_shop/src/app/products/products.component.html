@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="products-container">
+    <div
+      *ngFor="let product of products$ | async"
+      [ngClass]="{
+        'lg-container': product.discount >= 70,
+        'md-container': product.discount < 70 && product.discount >= 60,
+        'sm-container': product.discount < 60
+      }"
+    >
+      <app-product [product]="product"></app-product>
+    </div>
+  </div>
+</div>

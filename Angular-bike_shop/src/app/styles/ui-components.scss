@@ -1,0 +1,31 @@
+.products-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+}
+
+.discounted-price {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.old-price {
+  padding-top: 1rem;
+  font-size: x-large;
+  font-weight: 500;
+  color: rgb(255, 0, 0, 0.6);
+}
+
+.cart-wish-size-buttons {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.details-color-container {
+  border-radius: 3px;
+  padding: 0 1rem;
+}

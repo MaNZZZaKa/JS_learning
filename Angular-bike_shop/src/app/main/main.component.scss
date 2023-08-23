@@ -1,0 +1,39 @@
+.sales-title {
+  font-family: "Fasthand", cursive;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 3px 0 #58bac7, 1px 13px 5px #af7979;
+  line-height: 1.8;
+  font-size: 300%;
+}
+
+.lg-container {
+  width: 100%;
+}
+
+.md-container {
+  width: 50%;
+}
+
+.sm-container {
+  width: calc(100% / 3);
+}
+
+@media (max-width: 1025px) {
+  .lg-container {
+    width: 100%;
+  }
+
+  .md-container,
+  .sm-container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .lg-container,
+  .md-container,
+  .sm-container {
+    width: 100%;
+  }
+}

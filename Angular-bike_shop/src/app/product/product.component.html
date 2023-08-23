@@ -1,0 +1,55 @@
+<div class="product-container">
+  <div class="products-shipping-discount">
+    <div
+      class="product-shipping"
+      [ngClass]="{
+        'green-bg': product.shipping
+      }"
+    >
+      {{ product.shipping ? product.shipping : "" }}
+    </div>
+    <div
+      class="product-discount"
+      [ngClass]="{
+        'red-bg': product.discount >= 70,
+        'pink-bg': product.discount < 70 && product.discount >= 60,
+        'yellow-bg': product.discount < 60
+      }"
+    >
+      {{ product.discount }}&#37; Off
+    </div>
+  </div>
+  <a routerLink="/product/{{ product.id }}" class="product-link">
+    <figure class="product-img-container">
+      <img
+        src="{{ product.imgUrl }}"
+        alt="{{ product.name }}"
+        class="product-img"
+      />
+      <figcaption class="product-name default-container-size">
+        <h2>{{ product.name }}</h2>
+      </figcaption>
+    </figure>
+  </a>
+
+  <div class="product-price default-container-size">
+    <span class="discounted-price">
+      {{
+        calcDiscountPrice(product.price, product.discount) | currency : "EUR"
+      }}
+    </span>
+    <s class="old-price">{{ product.price | currency : "EUR" }}</s>
+  </div>
+
+  <div class="product-descr">
+    <div class="product-descr-contaider">
+      {{
+        details ? product.description : (product.description | sliceDescr : 48)
+      }}
+    </div>
+
+    <button class="product-descr-button" (click)="details = !details">
+      {{ details ? "less" : "more" }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.lg-container,
+.md-container,
+.sm-container {
+  width: calc(100% / 3);
+}
+
+@media (max-width: 1025px) {
+  .lg-container,
+  .md-container,
+  .sm-container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .lg-container,
+  .md-container,
+  .sm-container {
+    width: 100%;
+  }
+  .products-component {
+    margin: 0;
+  }
+}

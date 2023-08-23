@@ -1,1 +1,0 @@
-Create an online store with shopping cart, store data in local storage. Similar to design as examples. Create and import a list from a JSON file. Type data can be changed.
